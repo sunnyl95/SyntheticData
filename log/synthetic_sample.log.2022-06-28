@@ -1,0 +1,49 @@
+2022-06-28 16:21:19,501 INFO synthetic_model_server.py[80] 启动服务，服务监听端口为:40051
+2022-06-28 16:22:50,398 INFO synthetic_model_server.py[49] ------ 接收仿真数据生成模型训练参数:
+2022-06-28 16:22:50,398 INFO synthetic_model_server.py[57]    to_synthetic_file_path: example/data/adult.csv
+2022-06-28 16:22:50,398 INFO synthetic_model_server.py[58]    model_save_path: example/models/example.pkl
+2022-06-28 16:22:50,398 INFO synthetic_model_server.py[59]    tabel_type: tabular
+2022-06-28 16:22:50,398 INFO synthetic_model_server.py[60]    model_type: TVAE
+2022-06-28 16:22:50,398 INFO synthetic_model_server.py[61]    primary_key: 
+2022-06-28 16:22:50,399 INFO synthetic_model_server.py[62]    anonymize_fields: 
+2022-06-28 16:22:50,399 INFO synthetic_model.py[49] start training......
+2022-06-28 16:22:50,504 INFO synthetic_model.py[60] table columns: 15
+2022-06-28 16:22:50,504 INFO synthetic_model.py[61] table rows: 32561
+2022-06-28 16:22:50,506 INFO synthetic_model.py[66] Randomly select 1000 rows as train data from original 32561 rows
+2022-06-28 16:22:50,506 INFO synthetic_model.py[72] not exist primary key!
+2022-06-28 16:22:50,506 INFO synthetic_model.py[86] not exist anonymize_fields!
+2022-06-28 16:22:55,189 INFO synthetic_model.py[135] training finished.
+2022-06-28 20:29:16,585 INFO synthetic_sample_server.py[72] 启动服务，服务监听端口为:40052
+2022-06-28 20:36:18,786 INFO synthetic_sample_server.py[50] ------ 接收仿真数据生成样本数据参数:
+2022-06-28 20:36:18,786 INFO synthetic_sample_server.py[57]    real_data_file_path: example/data/adult.csv
+2022-06-28 20:36:18,786 INFO synthetic_sample_server.py[58]    model_type: example/models/example.pkl
+2022-06-28 20:36:18,787 INFO synthetic_sample_server.py[59]    model_type: TVAE
+2022-06-28 20:36:18,787 INFO synthetic_sample_server.py[60]    sample_number: 1000
+2022-06-28 20:36:18,787 INFO synthetic_sample_server.py[61]    anonymize_fields: 
+2022-06-28 20:36:18,787 INFO synthetic_sample.py[121] start sampling......
+2022-06-28 20:36:19,405 INFO synthetic_sample.py[180] sampling finished.
+2022-06-28 20:39:22,703 INFO synthetic_sample_server.py[72] 启动服务，服务监听端口为:40052
+2022-06-28 20:39:30,236 INFO synthetic_sample_server.py[50] ------ 接收仿真数据生成样本数据参数:
+2022-06-28 20:39:30,236 INFO synthetic_sample_server.py[57]    real_data_file_path: example/data/adult.csv
+2022-06-28 20:39:30,237 INFO synthetic_sample_server.py[58]    model_type: example/models/example.pkl
+2022-06-28 20:39:30,237 INFO synthetic_sample_server.py[59]    model_type: TVAE
+2022-06-28 20:39:30,237 INFO synthetic_sample_server.py[60]    sample_number: 1000
+2022-06-28 20:39:30,237 INFO synthetic_sample_server.py[61]    anonymize_fields: 
+2022-06-28 20:39:30,237 INFO synthetic_sample.py[121] start sampling......
+2022-06-28 20:39:30,557 INFO synthetic_sample.py[180] sampling finished.
+2022-06-28 20:40:07,876 INFO synthetic_sample_server.py[50] ------ 接收仿真数据生成样本数据参数:
+2022-06-28 20:40:07,877 INFO synthetic_sample_server.py[57]    real_data_file_path: example/data/adult.csv
+2022-06-28 20:40:07,877 INFO synthetic_sample_server.py[58]    model_type: example/models/example.pkl
+2022-06-28 20:40:07,877 INFO synthetic_sample_server.py[59]    model_type: TVAE
+2022-06-28 20:40:07,877 INFO synthetic_sample_server.py[60]    sample_number: 1000
+2022-06-28 20:40:07,877 INFO synthetic_sample_server.py[61]    anonymize_fields: 
+2022-06-28 20:40:07,877 INFO synthetic_sample.py[121] start sampling......
+2022-06-28 20:40:08,130 INFO synthetic_sample.py[180] sampling finished.
+2022-06-28 20:42:30,486 INFO synthetic_sample_server.py[50] ------ 接收仿真数据生成样本数据参数:
+2022-06-28 20:42:30,486 INFO synthetic_sample_server.py[57]    real_data_file_path: example/data/adult.csv
+2022-06-28 20:42:30,487 INFO synthetic_sample_server.py[58]    model_type: example/models/example.pkl
+2022-06-28 20:42:30,487 INFO synthetic_sample_server.py[59]    model_type: TVAE
+2022-06-28 20:42:30,487 INFO synthetic_sample_server.py[60]    sample_number: 100
+2022-06-28 20:42:30,487 INFO synthetic_sample_server.py[61]    anonymize_fields: 
+2022-06-28 20:42:30,487 INFO synthetic_sample.py[121] start sampling......
+2022-06-28 20:42:30,705 INFO synthetic_sample.py[180] sampling finished.

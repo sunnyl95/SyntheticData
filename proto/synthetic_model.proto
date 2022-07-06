@@ -1,0 +1,127 @@
+syntax = "proto3";
+
+package hitszids.wf.syntheticdata.api.v1;
+
+option java_multiple_files = true;
+option java_outer_classname = "SyntheticDataProto";
+option java_package = "org.hitszids.wf.syntheticdata.api.v1";
+
+service SyntheticModelService{
+  // 仿真数据生成模型服务
+  rpc SyntheticModel(SyntheticRequest) returns (SyntheticResponse) {}
+}
+
+// 仿真数据生成模型训练服务请求
+message SyntheticRequest{
+  // 待仿真数据文件路径，目前仅支持csv文件
+  string to_synthetic_file_path = 1;
+
+  // 模型保存路径
+  string  model_save_path= 2;
+
+  // 数据表类型，分为三类：["tabular":"单表"， "relational":"关系表", "timeseries":"时间序列表"],目前仅支持"tabular"
+  string tabel_type = 3;
+
+  // 模型类型，针对单表数据提供四种模型["GaussianCopula", "CTGAN", "TVAE", "CopulaGAN"], 测试阶段仅支持"TVAE"
+  string model_type = 4;
+
+  // 主键列名,若没有主键，则为默认值 default= None
+  string primary_key = 5;
+
+  // 敏感列名以及对应的faker匿名化字典对， 例如'{"addr":"address"}', key表示数据表中敏感字段的名称，value表示将使用哪种Faker类型生成假数据，替换掉真实敏感数据值
+
+  //Faker 类型枚举, 适用于不经常变的情况（√）
+  //Faker json,动态配置、可扩展性强，适用于经常变的情况
+  //确定敏感数据识别类型，做映射
+  string anonymize_fields = 6;
+
+  string task_type = 7;
+}
+
+// 任务类型：训练仿真模型、 利用仿真模型生成样本数据
+enum Task_Type{
+  int32  training = 0;
+  int32  sampling = 1;
+}
+
+// 仿真数据生成模型训练服务响应
+message SyntheticResponse{
+  // 状态码
+  Status status = 1;
+
+  // 识别结果。json串{列名:{'success':bool, 'type':敏感数据类型, 'percent':'识别出的数量/列中数据总量（最多1000）'}}
+  //string result = 2;
+}
+
+// 接口请求的应答状态码、消息
+message Status {
+    // 应答状态码
+    StatusCode code = 1;
+
+    // 应答消息
+    string msg = 2;
+}
+
+// 应答状态码枚举值
+enum StatusCode {
+    // 模型训练成功
+    OK = 0;
+
+    // 参数有误, 必填参数不存在属于参数有误
+    PARAMETER_ERROR = 10000;
+
+    // 读取数据文件失败
+    FILE_READ_ERROR = 10001;
+
+    //主键列名错误，原始数据表不存在该主键列名
+    PRIMARY_NOT_EXIST_ERROR = 10002;
+
+    //敏感字段错误，原始数据表不存在该敏感字段
+    Anonymize_Fields_ERROR = 10003;
+
+    //敏感字段错误，需要匿名的字段映射到Faker的名称有误
+    Anonymize_Fields_FAKER_ERROR = 10004;
+
+    //模型参数错误，模型类型不存在
+    MODEL_TYPE_ERROR = 10005;
+
+    //数据表参数错误，数据表类型不存在
+    TABLE_TYPE_ERROR = 10006;
+
+    //模型训练失败
+    MODEL_TRAIN_ERROR = 10007;
+
+    //模型保存失败
+    MODEL_SAVE_ERROR = 10008;
+
+}
+
+
+//数据表类型，枚举值
+enum TableType {
+    //单表类型
+    TABULAR = 0;
+
+    //关系型多表类型
+    RELATIONAL = 1;
+
+    //时间序列表
+    TIMESERIES = 2;
+
+}
+
+
+//模型类型，枚举值
+enum ModelType {
+    //TVAE模型
+    TVAE_MODEL = 0;
+
+    //CTGAN模型
+    CTGAN_MODEL = 1;
+
+    //GaussianCopula模型
+    GAUSSIAN_COPULA_MODEL= 2;
+
+    //CopulaGAN
+    COPULAGAN_MODEL = 3;
+}
