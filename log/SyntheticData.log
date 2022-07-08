@@ -1,0 +1,44 @@
+2022-07-08 09:35:15,928 INFO synthetic_sample_server.py[57] 启动服务，服务监听端口为:40052
+2022-07-08 09:37:24,631 INFO synthetic_sample_server.py[34] ------ 接收仿真数据训练模型服务参数:
+2022-07-08 09:37:24,632 INFO synthetic_sample_server.py[39]    model_save_path: 
+2022-07-08 09:37:24,632 INFO synthetic_sample_server.py[40]    sample_num_rows: 0
+2022-07-08 09:38:43,971 INFO synthetic_sample_server.py[59] 启动服务，服务监听端口为:40052
+2022-07-08 09:38:51,323 INFO synthetic_sample_server.py[59] 启动服务，服务监听端口为:40052
+2022-07-08 09:39:04,046 INFO synthetic_sample_server.py[59] 启动服务，服务监听端口为:40052
+2022-07-08 09:39:11,097 INFO synthetic_sample_server.py[34] ------ 接收仿真数据训练模型服务参数:
+2022-07-08 09:39:11,097 INFO synthetic_sample_server.py[39]    model_save_path: 
+2022-07-08 09:39:11,097 INFO synthetic_sample_server.py[40]    sample_num_rows: 0
+2022-07-08 09:39:41,979 INFO synthetic_sample_server.py[34] ------ 接收仿真数据训练模型服务参数:
+2022-07-08 09:39:41,979 INFO synthetic_sample_server.py[39]    model_save_path: example/models/example.pkl
+2022-07-08 09:39:41,980 INFO synthetic_sample_server.py[40]    sample_num_rows: 100
+2022-07-08 09:40:16,889 INFO synthetic_model_server.py[106] 启动服务，服务监听端口为:40053
+2022-07-08 09:40:45,427 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-08 09:40:45,427 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-08 09:40:45,427 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-08 09:40:45,427 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-08 09:40:45,428 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-08 09:40:45,428 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-08 09:40:45,428 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-08 09:40:45,428 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-08 09:40:45,428 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-08 09:40:45,428 INFO synthetic_model_server.py[80]    Traing and Sampling
+2022-07-08 09:40:45,499 INFO SyntheticDataModel.py[64]    table columns: 15
+2022-07-08 09:40:45,499 INFO SyntheticDataModel.py[65]    table rows: 32561
+2022-07-08 09:40:45,499 INFO SyntheticDataModel.py[69] Randomly select 1000 rows as train data from original 32561 rows
+2022-07-08 09:40:45,504 INFO SyntheticDataModel.py[75]    not exist primary key!
+2022-07-08 09:40:45,504 INFO SyntheticDataModel.py[89]    not exist anonymize_fields!
+2022-07-08 09:40:53,433 INFO SyntheticDataModel.py[303] training finished.
+2022-07-08 09:40:53,439 INFO SyntheticDataModel.py[144] 模型保存成功！
+2022-07-08 09:40:53,553 INFO SyntheticDataModel.py[209] The Data don't have sensitivate columns,so it don't have privacy_score
+2022-07-08 09:41:15,329 INFO synthetic_sample_server.py[34] ------ 接收仿真数据训练模型服务参数:
+2022-07-08 09:41:15,329 INFO synthetic_sample_server.py[39]    model_save_path: example/models/example.pkl
+2022-07-08 09:41:15,329 INFO synthetic_sample_server.py[40]    sample_num_rows: 100
+2022-07-08 09:41:32,253 INFO synthetic_sample_server.py[59] 启动服务，服务监听端口为:40052
+2022-07-08 09:41:40,320 INFO synthetic_sample_server.py[34] ------ 接收仿真数据训练模型服务参数:
+2022-07-08 09:41:40,320 INFO synthetic_sample_server.py[39]    model_save_path: example/models/example.pkl
+2022-07-08 09:41:40,320 INFO synthetic_sample_server.py[40]    sample_num_rows: 100
+2022-07-08 09:47:35,729 INFO synthetic_sample_server.py[59] 启动服务，服务监听端口为:40052
+2022-07-08 09:47:39,448 INFO synthetic_sample_server.py[34] ------ 接收仿真数据训练模型服务参数:
+2022-07-08 09:47:39,448 INFO synthetic_sample_server.py[39]    model_save_path: example/models/example.pkl
+2022-07-08 09:47:39,448 INFO synthetic_sample_server.py[40]    sample_num_rows: 100
+2022-07-08 09:47:39,502 INFO SyntheticDataModel.py[206] The Data don't have sensitivate columns,so it don't have privacy_score

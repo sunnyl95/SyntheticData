@@ -175,7 +175,7 @@ class TVAE(TVAEModel):
                  anonymize_fields=None, primary_key=None, constraints=None, table_metadata=None,
                  embedding_dim=128, compress_dims=(128, 128), decompress_dims=(128, 128),
                  l2scale=1e-5, batch_size=500, epochs=300, loss_factor=2, cuda=True,
-                 rounding='auto', min_value='auto', max_value='auto'):
+                 rounding='auto', min_value='auto', max_value='auto',verbose=True):
         super().__init__(
             field_names=field_names,
             primary_key=primary_key,

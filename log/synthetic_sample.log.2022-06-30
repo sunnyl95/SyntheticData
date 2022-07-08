@@ -1,8 +1,0 @@
-2022-06-30 17:00:32,686 INFO synthetic_sample_server.py[50] ------ 接收仿真数据生成样本数据参数:
-2022-06-30 17:00:32,706 INFO synthetic_sample_server.py[57]    real_data_file_path: example/data/adult.csv
-2022-06-30 17:00:32,706 INFO synthetic_sample_server.py[58]    model_type: example/models/example.pkl
-2022-06-30 17:00:32,706 INFO synthetic_sample_server.py[59]    model_type: TVAE
-2022-06-30 17:00:32,706 INFO synthetic_sample_server.py[60]    sample_number: 100
-2022-06-30 17:00:32,706 INFO synthetic_sample_server.py[61]    anonymize_fields: 
-2022-06-30 17:00:32,707 INFO synthetic_sample.py[121] start sampling......
-2022-06-30 17:00:33,200 INFO synthetic_sample.py[180] sampling finished.

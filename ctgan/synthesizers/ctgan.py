@@ -420,6 +420,8 @@ class CTGANSynthesizer(BaseSynthesizer):
                 optimizerG.step()
 
             ep_et = time.time()
+
+            print(self._verbose)
             if self._verbose:
                 print(f'Epoch {i+1},  Cost Time {(ep_et-ep_st):.2f} s,  Loss G: {loss_g.detach().cpu(): .4f},'  # noqa: T001
                       f'Loss D: {loss_d.detach().cpu(): .4f}',

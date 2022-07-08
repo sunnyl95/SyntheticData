@@ -1,0 +1,128 @@
+syntax = "proto3";
+
+package syntheticdata.api.v1;
+
+option java_multiple_files = true;
+option java_outer_classname = "SyntheticDataProto";
+option java_package = "syntheticdata.api.v1";
+
+service SyntheticService{
+  // 仿真数据生成模型服务
+  rpc SyntheticModel(SyntheticModelRequest) returns (SyntheticResponse) {}
+  rpc SyntheticSample(SyntheticSampleRequest) returns (SyntheticResponse) {}
+}
+
+
+// 仿真数据生成模型训练服务请求
+message SyntheticModelRequest{
+  // 待仿真数据文件路径，目前仅支持csv文件
+  string real_data_file_path = 1;
+
+  // 模型保存/加载 路径
+  string  model_save_path= 2;
+
+  // 数据表类型，分为三类：["tabular":"单表"， "relational":"关系表", "timeseries":"时间序列表"],目前仅支持"tabular"
+  string tabel_type = 3;
+
+  // 模型类型，针对单表数据提供四种模型["GaussianCopula", "CTGAN", "TVAE", "CopulaGAN"], 测试阶段仅支持"TVAE"
+  string model_type = 4;
+
+  // 主键列名,可为空
+  string primary_key = 5;
+
+  // 【原始数据中的敏感列名】对应【敏感数据识别的类别】的字典对， 例如'{"addr":"address"}', key表示数据表中敏感字段的名称，value表示【敏感数据识别引擎识别出来的类别名称】
+  //类型枚举, 适用于不经常变的情况（√）
+  //json,动态配置、可扩展性强，适用于经常变的情况
+  //确定敏感数据识别类型，做映射
+  string anonymize_fields = 6;
+
+  //是否在训练完成后生成仿真数据
+  bool sampling_or_not = 7;
+
+  // 欲生成仿真数据的条数
+  int32 sample_num_rows = 8 ;
+
+}
+
+// 仿真数据生成样本数据服务请求
+message SyntheticSampleRequest{
+  // 模型保存/加载 路径
+  string  model_save_path= 4;
+
+  // 欲生成仿真数据的条数
+  int32 sample_num_rows = 9 ;
+
+}
+
+
+// 仿真数据生成服务响应（模型训练和生成仿真数据的响应内容一样）
+message SyntheticResponse{
+  // 状态码
+  Status status = 1;
+
+  // 仿真出来的样本数据。json串:sample = '{"col1":{"0":"value1_1","1":"value1_2","2":"value1_3"},"col2":{"0":"value2_1","1":"value2_2","2":"value2_3"}}'，
+  //通过df = pd.read_json(sample),将json转成DataFrame,  再通过df.to_csv("./XXX/XXX.csv"),将数据保存下来。
+  string synthetic_data = 2;
+
+  float privacy_score = 3;
+
+}
+
+// 接口请求的应答状态码、消息
+message Status {
+    // 应答状态码
+    StatusCode code = 1;
+
+    // 应答消息
+    string msg = 2;
+}
+
+
+// 应答状态码枚举值
+enum StatusCode {
+    // 服务请求成功，响应成功
+    OK = 0;
+
+    // 参数有误, 必填参数不存在属于参数有误
+    PARAMETER_ERROR = 10000;
+
+    // 读取数据文件失败
+    FILE_READ_ERROR = 10001;
+
+
+    //主键列名错误，原始数据表不存在该主键列名
+    PRIMARY_NOT_EXIST_ERROR = 10002;
+
+
+    //敏感字段错误，原始数据表不存在该敏感字段
+    Anonymize_Fields_ERROR = 10003;
+
+    //敏感字段错误，需要匿名的字段映射到Faker的名称有误
+    Anonymize_Fields_FAKER_ERROR = 10004;
+
+
+    //模型参数错误，模型类型不存在
+    MODEL_TYPE_ERROR = 10005;
+
+    //模型初始化失败
+    MODEL_INITIALIZATION_ERROR  = 10006;
+
+    //模型训练失败
+    MODEL_TRAIN_ERROR = 10007;
+
+    //模型保存失败
+    MODEL_SAVE_ERROR = 10008;
+
+    //模型加载失败
+    MODEL_LOAD_ERROR = 10009;
+
+    //生成仿真样本数据失败
+    SAMPLE_DATA_GENERATOR_ERROR = 10010;
+
+    //计算仿真数据的隐私性失败
+    PRIVACY_SCORE_ERROR = 10011;
+
+    //未指定任务类型, 或任务类型有误
+    TASK_TYPE_ERROR = 10012;
+
+}
