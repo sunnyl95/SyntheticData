@@ -1,0 +1,918 @@
+2022-07-07 10:15:58,390 INFO synthetic_model_server.py[109] 启动服务，服务监听端口为:40053
+2022-07-07 10:29:52,753 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 10:29:52,753 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 10:29:52,754 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 10:29:52,754 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 10:29:52,754 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 10:29:52,754 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 10:29:52,754 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 10:29:52,756 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 10:29:52,756 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 10:29:52,756 INFO synthetic_model_server.py[80] Traing and Sampling
+2022-07-07 10:30:25,410 INFO synthetic_model_server.py[109] 启动服务，服务监听端口为:40053
+2022-07-07 10:30:28,598 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 10:30:28,598 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 10:30:28,599 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 10:30:28,599 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 10:30:28,599 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 10:30:28,599 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 10:30:28,599 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 10:30:28,599 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 10:30:28,599 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 10:30:28,599 INFO synthetic_model_server.py[80] Traing and Sampling
+2022-07-07 10:30:28,675 INFO SyntheticDataModel.py[62] table columns: 15
+2022-07-07 10:30:28,675 INFO SyntheticDataModel.py[63] table rows: 32561
+2022-07-07 10:30:28,675 INFO SyntheticDataModel.py[72] not exist primary key!
+2022-07-07 10:30:28,675 INFO SyntheticDataModel.py[86] not exist anonymize_fields!
+2022-07-07 10:38:52,158 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 10:38:52,158 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 10:38:52,158 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 10:38:52,159 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 10:38:52,159 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 10:38:52,159 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 10:38:52,159 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 10:38:52,159 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 10:38:52,159 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 10:38:52,159 INFO synthetic_model_server.py[80] Traing and Sampling
+2022-07-07 10:38:52,214 INFO SyntheticDataModel.py[62] table columns: 15
+2022-07-07 10:38:52,214 INFO SyntheticDataModel.py[63] table rows: 32561
+2022-07-07 10:38:52,214 INFO SyntheticDataModel.py[72] not exist primary key!
+2022-07-07 10:38:52,214 INFO SyntheticDataModel.py[86] not exist anonymize_fields!
+2022-07-07 10:40:55,055 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 10:40:55,055 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 10:40:55,055 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 10:40:55,055 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 10:40:55,056 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 10:40:55,056 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 10:40:55,056 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 10:40:55,056 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 10:40:55,056 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 10:40:55,056 INFO synthetic_model_server.py[80] Traing and Sampling
+2022-07-07 10:40:55,119 INFO SyntheticDataModel.py[62] table columns: 15
+2022-07-07 10:40:55,119 INFO SyntheticDataModel.py[63] table rows: 32561
+2022-07-07 10:40:55,119 INFO SyntheticDataModel.py[72] not exist primary key!
+2022-07-07 10:40:55,119 INFO SyntheticDataModel.py[86] not exist anonymize_fields!
+2022-07-07 10:41:04,269 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 10:41:04,269 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 10:41:04,269 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 10:41:04,269 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 10:41:04,270 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 10:41:04,270 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 10:41:04,270 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 10:41:04,270 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 10:41:04,270 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 10:41:04,270 INFO synthetic_model_server.py[80] Traing and Sampling
+2022-07-07 10:41:04,328 INFO SyntheticDataModel.py[62] table columns: 15
+2022-07-07 10:41:04,328 INFO SyntheticDataModel.py[63] table rows: 32561
+2022-07-07 10:41:04,328 INFO SyntheticDataModel.py[72] not exist primary key!
+2022-07-07 10:41:04,328 INFO SyntheticDataModel.py[86] not exist anonymize_fields!
+2022-07-07 10:41:25,651 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 10:41:25,651 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 10:41:25,651 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 10:41:25,651 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 10:41:25,651 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 10:41:25,651 INFO synthetic_model_server.py[75]    primary_key:  
+2022-07-07 10:41:25,651 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 10:41:25,651 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 10:41:25,651 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 10:41:25,651 INFO synthetic_model_server.py[80] Traing and Sampling
+2022-07-07 10:41:25,711 INFO SyntheticDataModel.py[62] table columns: 15
+2022-07-07 10:41:25,711 INFO SyntheticDataModel.py[63] table rows: 32561
+2022-07-07 10:41:25,714 ERROR SyntheticDataModel.py[80] ' '
+2022-07-07 10:41:25,714 INFO SyntheticDataModel.py[86] not exist anonymize_fields!
+2022-07-07 10:41:31,651 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 10:41:31,652 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 10:41:31,652 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 10:41:31,652 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 10:41:31,652 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 10:41:31,652 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 10:41:31,652 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 10:41:31,652 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 10:41:31,652 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 10:41:31,652 INFO synthetic_model_server.py[80] Traing and Sampling
+2022-07-07 10:41:31,709 INFO SyntheticDataModel.py[62] table columns: 15
+2022-07-07 10:41:31,709 INFO SyntheticDataModel.py[63] table rows: 32561
+2022-07-07 10:41:31,710 INFO SyntheticDataModel.py[72] not exist primary key!
+2022-07-07 10:41:31,710 INFO SyntheticDataModel.py[86] not exist anonymize_fields!
+2022-07-07 10:42:07,866 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 10:42:07,866 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 10:42:07,866 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 10:42:07,866 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 10:42:07,866 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 10:42:07,866 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 10:42:07,866 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 10:42:07,866 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 10:42:07,866 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 10:42:07,866 INFO synthetic_model_server.py[80] Traing and Sampling
+2022-07-07 10:42:07,926 INFO SyntheticDataModel.py[62] table columns: 15
+2022-07-07 10:42:07,926 INFO SyntheticDataModel.py[63] table rows: 32561
+2022-07-07 10:42:07,926 INFO SyntheticDataModel.py[72] not exist primary key!
+2022-07-07 10:42:07,926 INFO SyntheticDataModel.py[86] not exist anonymize_fields!
+2022-07-07 10:42:44,579 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 10:42:44,579 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 10:42:44,579 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 10:42:44,580 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 10:42:44,580 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 10:42:44,580 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 10:42:44,580 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 10:42:44,580 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 10:42:44,580 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 10:42:44,580 INFO synthetic_model_server.py[80] Traing and Sampling
+2022-07-07 10:42:44,637 INFO SyntheticDataModel.py[62] table columns: 15
+2022-07-07 10:42:44,637 INFO SyntheticDataModel.py[63] table rows: 32561
+2022-07-07 10:42:44,637 INFO SyntheticDataModel.py[72] not exist primary key!
+2022-07-07 10:42:44,637 INFO SyntheticDataModel.py[86] not exist anonymize_fields!
+2022-07-07 10:43:23,093 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 10:43:23,093 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 10:43:23,093 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 10:43:23,093 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 10:43:23,093 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 10:43:23,093 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 10:43:23,093 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 10:43:23,093 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 10:43:23,093 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 10:43:23,093 INFO synthetic_model_server.py[80] Traing and Sampling
+2022-07-07 10:43:23,150 INFO SyntheticDataModel.py[62] table columns: 15
+2022-07-07 10:43:23,150 INFO SyntheticDataModel.py[63] table rows: 32561
+2022-07-07 10:43:23,150 INFO SyntheticDataModel.py[72] not exist primary key!
+2022-07-07 10:43:23,150 INFO SyntheticDataModel.py[86] not exist anonymize_fields!
+2022-07-07 10:43:38,028 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 10:43:38,028 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 10:43:38,028 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 10:43:38,028 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 10:43:38,028 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 10:43:38,028 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 10:43:38,028 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 10:43:38,029 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 10:43:38,029 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 10:43:38,029 INFO synthetic_model_server.py[80] Traing and Sampling
+2022-07-07 10:43:38,087 INFO SyntheticDataModel.py[62] table columns: 15
+2022-07-07 10:43:38,087 INFO SyntheticDataModel.py[63] table rows: 32561
+2022-07-07 10:43:38,088 INFO SyntheticDataModel.py[72] not exist primary key!
+2022-07-07 10:43:38,088 INFO SyntheticDataModel.py[86] not exist anonymize_fields!
+2022-07-07 10:43:57,187 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 10:43:57,187 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 10:43:57,187 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 10:43:57,187 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 10:43:57,187 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 10:43:57,187 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 10:43:57,187 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 10:43:57,187 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 10:43:57,187 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 10:43:57,187 INFO synthetic_model_server.py[80] Traing and Sampling
+2022-07-07 10:43:57,246 INFO SyntheticDataModel.py[62] table columns: 15
+2022-07-07 10:43:57,246 INFO SyntheticDataModel.py[63] table rows: 32561
+2022-07-07 10:43:57,246 INFO SyntheticDataModel.py[72] not exist primary key!
+2022-07-07 10:43:57,246 INFO SyntheticDataModel.py[86] not exist anonymize_fields!
+2022-07-07 10:43:57,249 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 10:43:57,249 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 10:43:57,249 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 10:43:57,249 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 10:43:57,249 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 10:43:57,249 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 10:43:57,249 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 10:43:57,249 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 10:43:57,249 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 10:43:57,249 INFO synthetic_model_server.py[80] Traing and Sampling
+2022-07-07 10:43:57,307 INFO SyntheticDataModel.py[62] table columns: 15
+2022-07-07 10:43:57,307 INFO SyntheticDataModel.py[63] table rows: 32561
+2022-07-07 10:43:57,307 INFO SyntheticDataModel.py[72] not exist primary key!
+2022-07-07 10:43:57,307 INFO SyntheticDataModel.py[86] not exist anonymize_fields!
+2022-07-07 10:45:11,192 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 10:45:11,192 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 10:45:11,192 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 10:45:11,192 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 10:45:11,192 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 10:45:11,192 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 10:45:11,192 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 10:45:11,192 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 10:45:11,192 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 10:45:11,193 INFO synthetic_model_server.py[80] Traing and Sampling
+2022-07-07 10:45:11,250 INFO SyntheticDataModel.py[62] table columns: 15
+2022-07-07 10:45:11,250 INFO SyntheticDataModel.py[63] table rows: 32561
+2022-07-07 10:45:11,250 INFO SyntheticDataModel.py[72] not exist primary key!
+2022-07-07 10:45:11,250 INFO SyntheticDataModel.py[86] not exist anonymize_fields!
+2022-07-07 10:45:31,174 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 10:45:31,174 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 10:45:31,174 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 10:45:31,174 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 10:45:31,174 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 10:45:31,174 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 10:45:31,174 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 10:45:31,175 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 10:45:31,175 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 10:45:31,175 INFO synthetic_model_server.py[80] Traing and Sampling
+2022-07-07 10:45:31,230 INFO SyntheticDataModel.py[62] table columns: 15
+2022-07-07 10:45:31,230 INFO SyntheticDataModel.py[63] table rows: 32561
+2022-07-07 10:45:31,230 INFO SyntheticDataModel.py[72] not exist primary key!
+2022-07-07 10:45:31,230 INFO SyntheticDataModel.py[86] not exist anonymize_fields!
+2022-07-07 10:47:17,759 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 10:47:17,759 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 10:47:17,759 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 10:47:17,759 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 10:47:17,759 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 10:47:17,759 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 10:47:17,759 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 10:47:17,759 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 10:47:17,759 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 10:47:17,759 INFO synthetic_model_server.py[80] Traing and Sampling
+2022-07-07 10:47:17,815 INFO SyntheticDataModel.py[62] table columns: 15
+2022-07-07 10:47:17,815 INFO SyntheticDataModel.py[63] table rows: 32561
+2022-07-07 10:47:17,815 INFO SyntheticDataModel.py[72] not exist primary key!
+2022-07-07 10:47:17,815 INFO SyntheticDataModel.py[86] not exist anonymize_fields!
+2022-07-07 10:48:20,062 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 10:48:20,062 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 10:48:20,062 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 10:48:20,062 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 10:48:20,062 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 10:48:20,062 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 10:48:20,063 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 10:48:20,063 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 10:48:20,063 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 10:48:20,063 INFO synthetic_model_server.py[80] Traing and Sampling
+2022-07-07 10:48:20,118 INFO SyntheticDataModel.py[62] table columns: 15
+2022-07-07 10:48:20,118 INFO SyntheticDataModel.py[63] table rows: 32561
+2022-07-07 10:48:20,118 INFO SyntheticDataModel.py[72] not exist primary key!
+2022-07-07 10:48:20,118 INFO SyntheticDataModel.py[86] not exist anonymize_fields!
+2022-07-07 10:48:26,579 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 10:48:26,579 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 10:48:26,579 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 10:48:26,579 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 10:48:26,580 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 10:48:26,580 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 10:48:26,580 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 10:48:26,580 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 10:48:26,580 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 10:48:26,580 INFO synthetic_model_server.py[80] Traing and Sampling
+2022-07-07 10:48:26,635 INFO SyntheticDataModel.py[62] table columns: 15
+2022-07-07 10:48:26,635 INFO SyntheticDataModel.py[63] table rows: 32561
+2022-07-07 10:48:26,635 INFO SyntheticDataModel.py[72] not exist primary key!
+2022-07-07 10:48:26,635 INFO SyntheticDataModel.py[86] not exist anonymize_fields!
+2022-07-07 10:48:50,605 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 10:48:50,605 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 10:48:50,605 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 10:48:50,605 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 10:48:50,605 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 10:48:50,605 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 10:48:50,605 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 10:48:50,605 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 10:48:50,606 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 10:48:50,606 INFO synthetic_model_server.py[80] Traing and Sampling
+2022-07-07 10:48:50,661 INFO SyntheticDataModel.py[62] table columns: 15
+2022-07-07 10:48:50,661 INFO SyntheticDataModel.py[63] table rows: 32561
+2022-07-07 10:48:50,661 INFO SyntheticDataModel.py[72] not exist primary key!
+2022-07-07 10:48:50,661 INFO SyntheticDataModel.py[86] not exist anonymize_fields!
+2022-07-07 10:49:01,514 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 10:49:01,515 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 10:49:01,515 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 10:49:01,515 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 10:49:01,515 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 10:49:01,515 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 10:49:01,515 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 10:49:01,515 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 10:49:01,515 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 10:49:01,516 INFO synthetic_model_server.py[80] Traing and Sampling
+2022-07-07 10:49:01,596 INFO SyntheticDataModel.py[62] table columns: 15
+2022-07-07 10:49:01,596 INFO SyntheticDataModel.py[63] table rows: 32561
+2022-07-07 10:49:01,596 INFO SyntheticDataModel.py[72] not exist primary key!
+2022-07-07 10:49:01,596 INFO SyntheticDataModel.py[86] not exist anonymize_fields!
+2022-07-07 10:51:16,921 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 10:51:16,921 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 10:51:16,921 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 10:51:16,921 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 10:51:16,921 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 10:51:16,921 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 10:51:16,922 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 10:51:16,922 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 10:51:16,922 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 10:51:16,922 INFO synthetic_model_server.py[80] Traing and Sampling
+2022-07-07 10:51:17,011 INFO SyntheticDataModel.py[62] table columns: 15
+2022-07-07 10:51:17,011 INFO SyntheticDataModel.py[63] table rows: 32561
+2022-07-07 10:51:17,012 INFO SyntheticDataModel.py[72] not exist primary key!
+2022-07-07 10:51:17,012 INFO SyntheticDataModel.py[86] not exist anonymize_fields!
+2022-07-07 10:51:31,066 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 10:51:31,066 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 10:51:31,066 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 10:51:31,066 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 10:51:31,066 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 10:51:31,066 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 10:51:31,066 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 10:51:31,066 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 10:51:31,066 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 10:51:31,066 INFO synthetic_model_server.py[80] Traing and Sampling
+2022-07-07 10:51:31,159 INFO SyntheticDataModel.py[62] table columns: 15
+2022-07-07 10:51:31,159 INFO SyntheticDataModel.py[63] table rows: 32561
+2022-07-07 10:51:31,159 INFO SyntheticDataModel.py[72] not exist primary key!
+2022-07-07 10:51:31,160 INFO SyntheticDataModel.py[86] not exist anonymize_fields!
+2022-07-07 10:52:37,317 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 10:52:37,317 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 10:52:37,317 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 10:52:37,317 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 10:52:37,318 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 10:52:37,318 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 10:52:37,318 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 10:52:37,318 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 10:52:37,318 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 10:52:37,318 INFO synthetic_model_server.py[80] Traing and Sampling
+2022-07-07 10:52:37,409 INFO SyntheticDataModel.py[62] table columns: 15
+2022-07-07 10:52:37,409 INFO SyntheticDataModel.py[63] table rows: 32561
+2022-07-07 10:52:37,409 INFO SyntheticDataModel.py[72] not exist primary key!
+2022-07-07 10:52:37,410 INFO SyntheticDataModel.py[86] not exist anonymize_fields!
+2022-07-07 10:52:52,846 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 10:52:52,846 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 10:52:52,846 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 10:52:52,846 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 10:52:52,846 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 10:52:52,846 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 10:52:52,846 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 10:52:52,846 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 10:52:52,846 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 10:52:52,847 INFO synthetic_model_server.py[80] Traing and Sampling
+2022-07-07 10:52:52,934 INFO SyntheticDataModel.py[62] table columns: 15
+2022-07-07 10:52:52,934 INFO SyntheticDataModel.py[63] table rows: 32561
+2022-07-07 10:52:52,934 INFO SyntheticDataModel.py[72] not exist primary key!
+2022-07-07 10:52:52,934 INFO SyntheticDataModel.py[86] not exist anonymize_fields!
+2022-07-07 10:54:16,022 INFO synthetic_model_server.py[106] 启动服务，服务监听端口为:40053
+2022-07-07 10:54:20,053 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 10:54:20,053 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 10:54:20,053 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 10:54:20,053 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 10:54:20,053 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 10:54:20,054 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 10:54:20,054 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 10:54:20,054 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 10:54:20,054 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 10:54:20,054 INFO synthetic_model_server.py[80]    Traing and Sampling
+2022-07-07 10:54:20,136 INFO SyntheticDataModel.py[62] table columns: 15
+2022-07-07 10:54:20,136 INFO SyntheticDataModel.py[63] table rows: 32561
+2022-07-07 10:54:20,136 INFO SyntheticDataModel.py[72] not exist primary key!
+2022-07-07 10:54:20,137 INFO SyntheticDataModel.py[86] not exist anonymize_fields!
+2022-07-07 10:55:16,018 INFO synthetic_model_server.py[106] 启动服务，服务监听端口为:40053
+2022-07-07 10:55:20,051 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 10:55:20,051 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 10:55:20,051 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 10:55:20,051 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 10:55:20,051 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 10:55:20,051 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 10:55:20,051 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 10:55:20,051 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 10:55:20,051 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 10:55:20,052 INFO synthetic_model_server.py[80]    Traing and Sampling
+2022-07-07 10:55:20,129 INFO SyntheticDataModel.py[62] table columns: 15
+2022-07-07 10:55:20,129 INFO SyntheticDataModel.py[63] table rows: 32561
+2022-07-07 10:55:20,129 INFO SyntheticDataModel.py[72]    not exist primary key!
+2022-07-07 10:55:20,129 INFO SyntheticDataModel.py[86]    not exist anonymize_fields!
+2022-07-07 10:57:47,139 INFO synthetic_model_server.py[106] 启动服务，服务监听端口为:40053
+2022-07-07 10:57:58,202 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 10:57:58,202 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 10:57:58,202 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 10:57:58,202 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 10:57:58,202 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 10:57:58,203 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 10:57:58,203 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 10:57:58,203 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 10:57:58,203 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 10:57:58,203 INFO synthetic_model_server.py[80]    Traing and Sampling
+2022-07-07 10:57:58,290 INFO SyntheticDataModel.py[62] table columns: 15
+2022-07-07 10:57:58,290 INFO SyntheticDataModel.py[63] table rows: 32561
+2022-07-07 10:57:58,290 INFO SyntheticDataModel.py[72]    not exist primary key!
+2022-07-07 10:57:58,290 INFO SyntheticDataModel.py[86]    not exist anonymize_fields!
+2022-07-07 10:59:38,700 INFO synthetic_model_server.py[106] 启动服务，服务监听端口为:40053
+2022-07-07 11:00:27,107 INFO synthetic_model_server.py[106] 启动服务，服务监听端口为:40053
+2022-07-07 11:00:36,488 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 11:00:36,489 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 11:00:36,489 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 11:00:36,489 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 11:00:36,489 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 11:00:36,489 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 11:00:36,489 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 11:00:36,489 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 11:00:36,490 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 11:00:36,490 INFO synthetic_model_server.py[80]    Traing and Sampling
+2022-07-07 11:00:36,587 INFO SyntheticDataModel.py[62]    table columns: 15
+2022-07-07 11:00:36,587 INFO SyntheticDataModel.py[63]    table rows: 32561
+2022-07-07 11:00:36,588 INFO SyntheticDataModel.py[72]    not exist primary key!
+2022-07-07 11:00:36,588 INFO SyntheticDataModel.py[86]    not exist anonymize_fields!
+2022-07-07 11:10:15,833 INFO synthetic_model_server.py[106] 启动服务，服务监听端口为:40053
+2022-07-07 11:10:25,848 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 11:10:25,848 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 11:10:25,848 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 11:10:25,848 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 11:10:25,848 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 11:10:25,848 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 11:10:25,848 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 11:10:25,848 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 11:10:25,849 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 11:10:25,849 INFO synthetic_model_server.py[80]    Traing and Sampling
+2022-07-07 11:10:25,984 INFO SyntheticDataModel.py[62]    table columns: 15
+2022-07-07 11:10:25,985 INFO SyntheticDataModel.py[63]    table rows: 32561
+2022-07-07 11:10:25,985 INFO SyntheticDataModel.py[72]    not exist primary key!
+2022-07-07 11:10:25,985 INFO SyntheticDataModel.py[86]    not exist anonymize_fields!
+2022-07-07 11:10:26,062 INFO SyntheticDataModel.py[62]    table columns: 15
+2022-07-07 11:10:26,063 INFO SyntheticDataModel.py[63]    table rows: 32561
+2022-07-07 11:10:26,063 INFO SyntheticDataModel.py[72]    not exist primary key!
+2022-07-07 11:10:26,063 INFO SyntheticDataModel.py[86]    not exist anonymize_fields!
+2022-07-07 11:10:26,063 ERROR SyntheticDataModel.py[125] fit() got an unexpected keyword argument 'verbose'
+2022-07-07 11:10:26,063 INFO SyntheticDataModel.py[292] training finished.
+2022-07-07 11:14:09,684 INFO synthetic_model_server.py[106] 启动服务，服务监听端口为:40053
+2022-07-07 11:14:15,574 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 11:14:15,575 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 11:14:15,575 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 11:14:15,575 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 11:14:15,575 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 11:14:15,575 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 11:14:15,575 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 11:14:15,575 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 11:14:15,575 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 11:14:15,575 INFO synthetic_model_server.py[80]    Traing and Sampling
+2022-07-07 11:14:15,715 INFO SyntheticDataModel.py[62]    table columns: 15
+2022-07-07 11:14:15,715 INFO SyntheticDataModel.py[63]    table rows: 32561
+2022-07-07 11:14:15,715 INFO SyntheticDataModel.py[72]    not exist primary key!
+2022-07-07 11:14:15,715 INFO SyntheticDataModel.py[86]    not exist anonymize_fields!
+2022-07-07 11:14:15,799 INFO SyntheticDataModel.py[62]    table columns: 15
+2022-07-07 11:14:15,800 INFO SyntheticDataModel.py[63]    table rows: 32561
+2022-07-07 11:14:15,800 INFO SyntheticDataModel.py[72]    not exist primary key!
+2022-07-07 11:14:15,800 INFO SyntheticDataModel.py[86]    not exist anonymize_fields!
+2022-07-07 11:16:52,734 INFO synthetic_model_server.py[106] 启动服务，服务监听端口为:40053
+2022-07-07 11:16:56,002 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 11:16:56,002 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 11:16:56,003 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 11:16:56,003 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 11:16:56,003 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 11:16:56,003 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 11:16:56,003 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 11:16:56,003 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 11:16:56,003 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 11:16:56,003 INFO synthetic_model_server.py[80]    Traing and Sampling
+2022-07-07 11:16:56,139 INFO SyntheticDataModel.py[62]    table columns: 15
+2022-07-07 11:16:56,140 INFO SyntheticDataModel.py[63]    table rows: 32561
+2022-07-07 11:16:56,140 INFO SyntheticDataModel.py[72]    not exist primary key!
+2022-07-07 11:16:56,140 INFO SyntheticDataModel.py[86]    not exist anonymize_fields!
+2022-07-07 11:16:56,220 INFO SyntheticDataModel.py[62]    table columns: 15
+2022-07-07 11:16:56,220 INFO SyntheticDataModel.py[63]    table rows: 32561
+2022-07-07 11:16:56,220 INFO SyntheticDataModel.py[72]    not exist primary key!
+2022-07-07 11:16:56,221 INFO SyntheticDataModel.py[86]    not exist anonymize_fields!
+2022-07-07 11:18:26,774 INFO synthetic_model_server.py[106] 启动服务，服务监听端口为:40053
+2022-07-07 11:18:34,171 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 11:18:34,171 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 11:18:34,171 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 11:18:34,171 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 11:18:34,171 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 11:18:34,171 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 11:18:34,172 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 11:18:34,172 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 11:18:34,172 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 11:18:34,172 INFO synthetic_model_server.py[80]    Traing and Sampling
+2022-07-07 11:18:34,308 INFO SyntheticDataModel.py[62]    table columns: 15
+2022-07-07 11:18:34,308 INFO SyntheticDataModel.py[63]    table rows: 32561
+2022-07-07 11:18:34,308 INFO SyntheticDataModel.py[72]    not exist primary key!
+2022-07-07 11:18:34,308 INFO SyntheticDataModel.py[86]    not exist anonymize_fields!
+2022-07-07 11:18:34,394 INFO SyntheticDataModel.py[62]    table columns: 15
+2022-07-07 11:18:34,394 INFO SyntheticDataModel.py[63]    table rows: 32561
+2022-07-07 11:18:34,394 INFO SyntheticDataModel.py[72]    not exist primary key!
+2022-07-07 11:18:34,394 INFO SyntheticDataModel.py[86]    not exist anonymize_fields!
+2022-07-07 11:20:37,479 INFO synthetic_model_server.py[106] 启动服务，服务监听端口为:40053
+2022-07-07 11:20:41,662 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 11:20:41,662 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 11:20:41,663 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 11:20:41,663 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 11:20:41,663 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 11:20:41,663 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 11:20:41,663 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 11:20:41,663 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 11:20:41,663 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 11:20:41,663 INFO synthetic_model_server.py[80]    Traing and Sampling
+2022-07-07 11:20:41,791 INFO SyntheticDataModel.py[63]    table columns: 15
+2022-07-07 11:20:41,791 INFO SyntheticDataModel.py[64]    table rows: 32561
+2022-07-07 11:20:41,792 INFO SyntheticDataModel.py[73]    not exist primary key!
+2022-07-07 11:20:41,792 INFO SyntheticDataModel.py[87]    not exist anonymize_fields!
+2022-07-07 11:20:41,865 INFO SyntheticDataModel.py[63]    table columns: 15
+2022-07-07 11:20:41,865 INFO SyntheticDataModel.py[64]    table rows: 32561
+2022-07-07 11:20:41,865 INFO SyntheticDataModel.py[73]    not exist primary key!
+2022-07-07 11:20:41,865 INFO SyntheticDataModel.py[87]    not exist anonymize_fields!
+2022-07-07 11:21:44,765 INFO synthetic_model_server.py[106] 启动服务，服务监听端口为:40053
+2022-07-07 11:21:49,329 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 11:21:49,329 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 11:21:49,329 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 11:21:49,329 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 11:21:49,329 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 11:21:49,330 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 11:21:49,330 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 11:21:49,330 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 11:21:49,330 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 11:21:49,330 INFO synthetic_model_server.py[80]    Traing and Sampling
+2022-07-07 11:21:49,442 INFO SyntheticDataModel.py[63]    table columns: 15
+2022-07-07 11:21:49,442 INFO SyntheticDataModel.py[64]    table rows: 32561
+2022-07-07 11:21:49,442 INFO SyntheticDataModel.py[73]    not exist primary key!
+2022-07-07 11:21:49,442 INFO SyntheticDataModel.py[87]    not exist anonymize_fields!
+2022-07-07 11:21:49,510 INFO SyntheticDataModel.py[63]    table columns: 15
+2022-07-07 11:21:49,510 INFO SyntheticDataModel.py[64]    table rows: 32561
+2022-07-07 11:21:49,511 INFO SyntheticDataModel.py[73]    not exist primary key!
+2022-07-07 11:21:49,511 INFO SyntheticDataModel.py[87]    not exist anonymize_fields!
+2022-07-07 11:21:49,511 ERROR SyntheticDataModel.py[128] fit() missing 1 required positional argument: 'data'
+2022-07-07 11:21:49,511 INFO SyntheticDataModel.py[295] training finished.
+2022-07-07 11:22:49,260 INFO synthetic_model_server.py[106] 启动服务，服务监听端口为:40053
+2022-07-07 11:22:52,704 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 11:22:52,704 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 11:22:52,704 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 11:22:52,705 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 11:22:52,705 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 11:22:52,705 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 11:22:52,705 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 11:22:52,705 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 11:22:52,705 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 11:22:52,706 INFO synthetic_model_server.py[80]    Traing and Sampling
+2022-07-07 11:22:52,891 INFO SyntheticDataModel.py[63]    table columns: 15
+2022-07-07 11:22:52,892 INFO SyntheticDataModel.py[64]    table rows: 32561
+2022-07-07 11:22:52,892 INFO SyntheticDataModel.py[73]    not exist primary key!
+2022-07-07 11:22:52,892 INFO SyntheticDataModel.py[87]    not exist anonymize_fields!
+2022-07-07 11:22:53,000 INFO SyntheticDataModel.py[63]    table columns: 15
+2022-07-07 11:22:53,001 INFO SyntheticDataModel.py[64]    table rows: 32561
+2022-07-07 11:22:53,001 INFO SyntheticDataModel.py[73]    not exist primary key!
+2022-07-07 11:22:53,001 INFO SyntheticDataModel.py[87]    not exist anonymize_fields!
+2022-07-07 11:22:53,001 ERROR SyntheticDataModel.py[131] fit() missing 1 required positional argument: 'data'
+2022-07-07 11:22:53,001 INFO SyntheticDataModel.py[298] training finished.
+2022-07-07 11:26:15,353 INFO synthetic_model_server.py[106] 启动服务，服务监听端口为:40053
+2022-07-07 11:26:19,484 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 11:26:19,485 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 11:26:19,485 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 11:26:19,485 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 11:26:19,485 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 11:26:19,485 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 11:26:19,485 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 11:26:19,485 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 11:26:19,485 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 11:26:19,486 INFO synthetic_model_server.py[80]    Traing and Sampling
+2022-07-07 11:26:19,624 INFO SyntheticDataModel.py[63]    table columns: 15
+2022-07-07 11:26:19,624 INFO SyntheticDataModel.py[64]    table rows: 32561
+2022-07-07 11:26:19,624 INFO SyntheticDataModel.py[73]    not exist primary key!
+2022-07-07 11:26:19,625 INFO SyntheticDataModel.py[87]    not exist anonymize_fields!
+2022-07-07 11:26:19,705 INFO SyntheticDataModel.py[63]    table columns: 15
+2022-07-07 11:26:19,705 INFO SyntheticDataModel.py[64]    table rows: 32561
+2022-07-07 11:26:19,705 INFO SyntheticDataModel.py[73]    not exist primary key!
+2022-07-07 11:26:19,705 INFO SyntheticDataModel.py[87]    not exist anonymize_fields!
+2022-07-07 11:26:19,705 ERROR SyntheticDataModel.py[131] fit() missing 1 required positional argument: 'data'
+2022-07-07 11:26:19,706 INFO SyntheticDataModel.py[298] training finished.
+2022-07-07 11:27:06,884 INFO synthetic_model_server.py[106] 启动服务，服务监听端口为:40053
+2022-07-07 11:27:12,042 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 11:27:12,042 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 11:27:12,042 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 11:27:12,042 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 11:27:12,042 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 11:27:12,042 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 11:27:12,042 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 11:27:12,042 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 11:27:12,043 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 11:27:12,043 INFO synthetic_model_server.py[80]    Traing and Sampling
+2022-07-07 11:27:12,188 INFO SyntheticDataModel.py[63]    table columns: 15
+2022-07-07 11:27:12,189 INFO SyntheticDataModel.py[64]    table rows: 32561
+2022-07-07 11:27:12,189 INFO SyntheticDataModel.py[73]    not exist primary key!
+2022-07-07 11:27:12,189 INFO SyntheticDataModel.py[87]    not exist anonymize_fields!
+2022-07-07 11:27:12,274 INFO SyntheticDataModel.py[63]    table columns: 15
+2022-07-07 11:27:12,275 INFO SyntheticDataModel.py[64]    table rows: 32561
+2022-07-07 11:27:12,275 INFO SyntheticDataModel.py[73]    not exist primary key!
+2022-07-07 11:27:12,275 INFO SyntheticDataModel.py[87]    not exist anonymize_fields!
+2022-07-07 11:27:12,284 ERROR SyntheticDataModel.py[126] Field "" does not exist in this table
+2022-07-07 11:27:12,286 INFO SyntheticDataModel.py[293] training finished.
+2022-07-07 11:27:59,473 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 11:27:59,474 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 11:27:59,474 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 11:27:59,474 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 11:27:59,474 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 11:27:59,474 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 11:27:59,475 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 11:27:59,475 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 11:27:59,475 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 11:27:59,475 INFO synthetic_model_server.py[80]    Traing and Sampling
+2022-07-07 11:27:59,548 INFO SyntheticDataModel.py[63]    table columns: 15
+2022-07-07 11:27:59,548 INFO SyntheticDataModel.py[64]    table rows: 32561
+2022-07-07 11:27:59,548 INFO SyntheticDataModel.py[73]    not exist primary key!
+2022-07-07 11:27:59,548 INFO SyntheticDataModel.py[87]    not exist anonymize_fields!
+2022-07-07 11:27:59,627 INFO SyntheticDataModel.py[63]    table columns: 15
+2022-07-07 11:27:59,627 INFO SyntheticDataModel.py[64]    table rows: 32561
+2022-07-07 11:27:59,627 INFO SyntheticDataModel.py[73]    not exist primary key!
+2022-07-07 11:27:59,627 INFO SyntheticDataModel.py[87]    not exist anonymize_fields!
+2022-07-07 11:27:59,637 ERROR SyntheticDataModel.py[126] Field "" does not exist in this table
+2022-07-07 11:27:59,638 INFO SyntheticDataModel.py[293] training finished.
+2022-07-07 11:30:06,907 INFO synthetic_model_server.py[106] 启动服务，服务监听端口为:40053
+2022-07-07 11:30:12,680 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 11:30:12,680 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 11:30:12,680 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 11:30:12,680 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 11:30:12,680 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 11:30:12,680 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 11:30:12,680 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 11:30:12,681 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 11:30:12,681 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 11:30:12,681 INFO synthetic_model_server.py[80]    Traing and Sampling
+2022-07-07 11:30:12,823 INFO SyntheticDataModel.py[63]    table columns: 15
+2022-07-07 11:30:12,823 INFO SyntheticDataModel.py[64]    table rows: 32561
+2022-07-07 11:30:12,823 INFO SyntheticDataModel.py[73]    not exist primary key!
+2022-07-07 11:30:12,823 INFO SyntheticDataModel.py[87]    not exist anonymize_fields!
+2022-07-07 11:30:12,833 ERROR SyntheticDataModel.py[125] Field "" does not exist in this table
+2022-07-07 11:30:12,835 INFO SyntheticDataModel.py[292] training finished.
+2022-07-07 11:35:50,587 INFO synthetic_model_server.py[106] 启动服务，服务监听端口为:40053
+2022-07-07 11:35:54,254 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 11:35:54,254 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 11:35:54,254 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 11:35:54,254 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 11:35:54,255 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 11:35:54,255 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 11:35:54,255 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 11:35:54,255 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 11:35:54,255 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 11:35:54,255 INFO synthetic_model_server.py[80]    Traing and Sampling
+2022-07-07 11:35:54,419 INFO SyntheticDataModel.py[63]    table columns: 15
+2022-07-07 11:35:54,420 INFO SyntheticDataModel.py[64]    table rows: 32561
+2022-07-07 11:35:54,420 INFO SyntheticDataModel.py[73]    not exist primary key!
+2022-07-07 11:35:54,420 INFO SyntheticDataModel.py[87]    not exist anonymize_fields!
+2022-07-07 11:38:10,499 INFO synthetic_model_server.py[106] 启动服务，服务监听端口为:40053
+2022-07-07 11:38:14,205 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 11:38:14,205 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 11:38:14,205 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 11:38:14,205 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 11:38:14,205 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 11:38:14,205 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 11:38:14,206 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 11:38:14,206 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 11:38:14,206 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 11:38:14,207 INFO synthetic_model_server.py[80]    Traing and Sampling
+2022-07-07 11:38:14,367 INFO SyntheticDataModel.py[63]    table columns: 15
+2022-07-07 11:38:14,367 INFO SyntheticDataModel.py[64]    table rows: 32561
+2022-07-07 11:38:38,188 INFO synthetic_model_server.py[106] 启动服务，服务监听端口为:40053
+2022-07-07 11:39:10,582 INFO synthetic_model_server.py[106] 启动服务，服务监听端口为:40053
+2022-07-07 11:39:14,761 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 11:39:14,761 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 11:39:14,761 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 11:39:14,761 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 11:39:14,761 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 11:39:14,762 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 11:39:14,762 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 11:39:14,762 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 11:39:14,762 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 11:39:14,762 INFO synthetic_model_server.py[80]    Traing and Sampling
+2022-07-07 11:39:14,909 INFO SyntheticDataModel.py[63]    table columns: 15
+2022-07-07 11:39:14,909 INFO SyntheticDataModel.py[64]    table rows: 32561
+2022-07-07 11:39:14,909 INFO SyntheticDataModel.py[68] Randomly select 1000 rows as train data from original 32561 rows
+2022-07-07 11:39:14,915 INFO SyntheticDataModel.py[74]    not exist primary key!
+2022-07-07 11:39:14,915 INFO SyntheticDataModel.py[88]    not exist anonymize_fields!
+2022-07-07 11:40:04,639 INFO synthetic_model_server.py[106] 启动服务，服务监听端口为:40053
+2022-07-07 11:40:06,653 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 11:40:06,653 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 11:40:06,653 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 11:40:06,653 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 11:40:06,654 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 11:40:06,654 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 11:40:06,654 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 11:40:06,654 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 11:40:06,654 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 11:40:06,654 INFO synthetic_model_server.py[80]    Traing and Sampling
+2022-07-07 11:40:06,787 INFO SyntheticDataModel.py[63]    table columns: 15
+2022-07-07 11:40:06,787 INFO SyntheticDataModel.py[64]    table rows: 32561
+2022-07-07 11:40:06,787 INFO SyntheticDataModel.py[68] Randomly select 1000 rows as train data from original 32561 rows
+2022-07-07 11:40:06,791 INFO SyntheticDataModel.py[74]    not exist primary key!
+2022-07-07 11:40:06,791 INFO SyntheticDataModel.py[88]    not exist anonymize_fields!
+2022-07-07 11:40:14,609 INFO SyntheticDataModel.py[298] training finished.
+2022-07-07 11:40:14,614 ERROR SyntheticDataModel.py[138] Can't pickle <class 'SyntheticData_pb2.Status'>: import of module 'SyntheticData_pb2' failed
+2022-07-07 11:40:14,615 INFO SyntheticDataModel.py[140] training finished.
+2022-07-07 11:41:04,678 INFO synthetic_model_server.py[106] 启动服务，服务监听端口为:40053
+2022-07-07 11:41:08,387 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 11:41:08,387 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 11:41:08,387 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 11:41:08,387 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 11:41:08,387 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 11:41:08,387 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 11:41:08,387 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 11:41:08,388 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 11:41:08,388 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 11:41:08,388 INFO synthetic_model_server.py[80]    Traing and Sampling
+2022-07-07 11:41:08,539 INFO SyntheticDataModel.py[63]    table columns: 15
+2022-07-07 11:41:08,539 INFO SyntheticDataModel.py[64]    table rows: 32561
+2022-07-07 11:41:08,539 INFO SyntheticDataModel.py[68] Randomly select 1000 rows as train data from original 32561 rows
+2022-07-07 11:41:08,543 INFO SyntheticDataModel.py[74]    not exist primary key!
+2022-07-07 11:41:08,543 INFO SyntheticDataModel.py[88]    not exist anonymize_fields!
+2022-07-07 11:41:17,575 INFO SyntheticDataModel.py[299] training finished.
+2022-07-07 11:41:17,583 INFO SyntheticDataModel.py[141] training finished.
+2022-07-07 11:43:42,601 INFO synthetic_model_server.py[106] 启动服务，服务监听端口为:40053
+2022-07-07 11:43:46,478 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 11:43:46,478 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 11:43:46,478 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 11:43:46,478 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 11:43:46,478 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 11:43:46,478 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 11:43:46,478 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 11:43:46,479 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 11:43:46,479 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 11:43:46,479 INFO synthetic_model_server.py[80]    Traing and Sampling
+2022-07-07 11:43:46,626 INFO SyntheticDataModel.py[63]    table columns: 15
+2022-07-07 11:43:46,626 INFO SyntheticDataModel.py[64]    table rows: 32561
+2022-07-07 11:43:46,627 INFO SyntheticDataModel.py[68] Randomly select 1000 rows as train data from original 32561 rows
+2022-07-07 11:43:46,630 INFO SyntheticDataModel.py[74]    not exist primary key!
+2022-07-07 11:43:46,631 INFO SyntheticDataModel.py[88]    not exist anonymize_fields!
+2022-07-07 11:43:54,611 INFO SyntheticDataModel.py[300] training finished.
+2022-07-07 11:43:54,618 INFO SyntheticDataModel.py[142] 模型保存成功！
+2022-07-07 11:48:46,746 INFO synthetic_model_server.py[106] 启动服务，服务监听端口为:40053
+2022-07-07 11:48:51,056 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 11:48:51,056 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 11:48:51,056 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 11:48:51,057 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 11:48:51,057 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 11:48:51,057 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 11:48:51,057 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 11:48:51,057 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 11:48:51,057 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 11:48:51,057 INFO synthetic_model_server.py[80]    Traing and Sampling
+2022-07-07 11:48:51,200 INFO SyntheticDataModel.py[63]    table columns: 15
+2022-07-07 11:48:51,200 INFO SyntheticDataModel.py[64]    table rows: 32561
+2022-07-07 11:48:51,200 INFO SyntheticDataModel.py[68] Randomly select 1000 rows as train data from original 32561 rows
+2022-07-07 11:48:51,205 INFO SyntheticDataModel.py[74]    not exist primary key!
+2022-07-07 11:48:51,205 INFO SyntheticDataModel.py[88]    not exist anonymize_fields!
+2022-07-07 11:48:59,057 INFO SyntheticDataModel.py[300] training finished.
+2022-07-07 11:48:59,064 INFO SyntheticDataModel.py[142] 模型保存成功！
+2022-07-07 11:51:08,068 INFO synthetic_model_server.py[106] 启动服务，服务监听端口为:40053
+2022-07-07 11:51:11,778 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 11:51:11,778 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 11:51:11,778 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 11:51:11,779 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 11:51:11,779 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 11:51:11,779 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 11:51:11,779 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 11:51:11,779 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 11:51:11,779 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 11:51:11,779 INFO synthetic_model_server.py[80]    Traing and Sampling
+2022-07-07 11:51:11,943 INFO SyntheticDataModel.py[63]    table columns: 15
+2022-07-07 11:51:11,943 INFO SyntheticDataModel.py[64]    table rows: 32561
+2022-07-07 11:51:11,944 INFO SyntheticDataModel.py[68] Randomly select 1000 rows as train data from original 32561 rows
+2022-07-07 11:51:11,948 INFO SyntheticDataModel.py[74]    not exist primary key!
+2022-07-07 11:51:11,949 INFO SyntheticDataModel.py[88]    not exist anonymize_fields!
+2022-07-07 11:51:19,858 INFO SyntheticDataModel.py[301] training finished.
+2022-07-07 11:51:19,864 INFO SyntheticDataModel.py[142] 模型保存成功！
+2022-07-07 11:54:08,427 INFO synthetic_model_server.py[106] 启动服务，服务监听端口为:40053
+2022-07-07 11:54:12,228 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 11:54:12,228 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 11:54:12,228 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 11:54:12,229 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 11:54:12,229 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 11:54:12,229 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 11:54:12,229 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 11:54:12,229 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 11:54:12,229 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 11:54:12,229 INFO synthetic_model_server.py[80]    Traing and Sampling
+2022-07-07 11:54:12,401 INFO SyntheticDataModel.py[64]    table columns: 15
+2022-07-07 11:54:12,401 INFO SyntheticDataModel.py[65]    table rows: 32561
+2022-07-07 11:54:12,401 INFO SyntheticDataModel.py[69] Randomly select 1000 rows as train data from original 32561 rows
+2022-07-07 11:54:12,405 INFO SyntheticDataModel.py[75]    not exist primary key!
+2022-07-07 11:54:12,405 INFO SyntheticDataModel.py[89]    not exist anonymize_fields!
+2022-07-07 11:54:20,180 INFO SyntheticDataModel.py[302] training finished.
+2022-07-07 11:54:20,186 INFO SyntheticDataModel.py[143] 模型保存成功！
+2022-07-07 11:55:10,413 INFO synthetic_model_server.py[106] 启动服务，服务监听端口为:40053
+2022-07-07 11:55:14,498 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 11:55:14,498 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 11:55:14,498 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 11:55:14,499 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 11:55:14,499 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-07 11:55:14,499 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 11:55:14,499 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 11:55:14,499 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 11:55:14,499 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 11:55:14,499 INFO synthetic_model_server.py[80]    Traing and Sampling
+2022-07-07 11:55:14,679 INFO SyntheticDataModel.py[64]    table columns: 15
+2022-07-07 11:55:14,679 INFO SyntheticDataModel.py[65]    table rows: 32561
+2022-07-07 11:55:14,679 INFO SyntheticDataModel.py[69] Randomly select 1000 rows as train data from original 32561 rows
+2022-07-07 11:55:14,683 INFO SyntheticDataModel.py[75]    not exist primary key!
+2022-07-07 11:55:14,684 INFO SyntheticDataModel.py[89]    not exist anonymize_fields!
+2022-07-07 11:55:22,409 INFO SyntheticDataModel.py[302] training finished.
+2022-07-07 11:55:22,417 INFO SyntheticDataModel.py[143] 模型保存成功！
+2022-07-07 11:55:22,525 INFO SyntheticDataModel.py[208] The Data don't have sensitivate columns,so it don't have privacy_score
+2022-07-07 17:37:50,606 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 17:37:50,623 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 17:37:50,623 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 17:37:50,623 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 17:37:50,623 INFO synthetic_model_server.py[74]    model_type: CTGAN
+2022-07-07 17:37:50,623 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 17:37:50,623 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 17:37:50,624 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 17:37:50,624 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 17:37:50,624 INFO synthetic_model_server.py[80]    Traing and Sampling
+2022-07-07 17:37:50,930 INFO SyntheticDataModel.py[64]    table columns: 15
+2022-07-07 17:37:50,932 INFO SyntheticDataModel.py[65]    table rows: 32561
+2022-07-07 17:37:50,932 INFO SyntheticDataModel.py[69] Randomly select 1000 rows as train data from original 32561 rows
+2022-07-07 17:37:50,950 INFO SyntheticDataModel.py[75]    not exist primary key!
+2022-07-07 17:37:50,950 INFO SyntheticDataModel.py[89]    not exist anonymize_fields!
+2022-07-07 17:38:22,629 INFO SyntheticDataModel.py[302] training finished.
+2022-07-07 17:38:22,725 INFO SyntheticDataModel.py[143] 模型保存成功！
+2022-07-07 17:38:23,067 INFO SyntheticDataModel.py[208] The Data don't have sensitivate columns,so it don't have privacy_score
+2022-07-07 17:46:55,191 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 17:46:55,203 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 17:46:55,203 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 17:46:55,203 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 17:46:55,203 INFO synthetic_model_server.py[74]    model_type: GaussianCopula
+2022-07-07 17:46:55,203 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 17:46:55,204 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 17:46:55,204 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 17:46:55,204 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 17:46:55,204 INFO synthetic_model_server.py[80]    Traing and Sampling
+2022-07-07 17:46:55,437 INFO SyntheticDataModel.py[64]    table columns: 15
+2022-07-07 17:46:55,437 INFO SyntheticDataModel.py[65]    table rows: 32561
+2022-07-07 17:46:55,437 INFO SyntheticDataModel.py[69] Randomly select 1000 rows as train data from original 32561 rows
+2022-07-07 17:46:55,444 INFO SyntheticDataModel.py[75]    not exist primary key!
+2022-07-07 17:46:55,444 INFO SyntheticDataModel.py[89]    not exist anonymize_fields!
+2022-07-07 17:48:33,978 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 17:48:33,979 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 17:48:33,979 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 17:48:33,979 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 17:48:33,979 INFO synthetic_model_server.py[74]    model_type: GaussianCopula
+2022-07-07 17:48:33,979 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 17:48:33,979 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 17:48:33,979 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 17:48:33,980 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 17:48:33,980 INFO synthetic_model_server.py[80]    Traing and Sampling
+2022-07-07 17:48:34,076 INFO SyntheticDataModel.py[64]    table columns: 15
+2022-07-07 17:48:34,076 INFO SyntheticDataModel.py[65]    table rows: 32561
+2022-07-07 17:48:34,077 INFO SyntheticDataModel.py[69] Randomly select 1000 rows as train data from original 32561 rows
+2022-07-07 17:48:34,081 INFO SyntheticDataModel.py[75]    not exist primary key!
+2022-07-07 17:48:34,081 INFO SyntheticDataModel.py[89]    not exist anonymize_fields!
+2022-07-07 17:49:20,403 INFO synthetic_model_server.py[106] 启动服务，服务监听端口为:40053
+2022-07-07 17:49:24,538 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 17:49:24,539 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 17:49:24,539 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 17:49:24,539 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 17:49:24,539 INFO synthetic_model_server.py[74]    model_type: GaussianCopula
+2022-07-07 17:49:24,539 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 17:49:24,539 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 17:49:24,540 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 17:49:24,540 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 17:49:24,540 INFO synthetic_model_server.py[80]    Traing and Sampling
+2022-07-07 17:49:24,636 INFO SyntheticDataModel.py[64]    table columns: 15
+2022-07-07 17:49:24,637 INFO SyntheticDataModel.py[65]    table rows: 32561
+2022-07-07 17:49:24,637 INFO SyntheticDataModel.py[69] Randomly select 1000 rows as train data from original 32561 rows
+2022-07-07 17:49:24,641 INFO SyntheticDataModel.py[75]    not exist primary key!
+2022-07-07 17:49:24,641 INFO SyntheticDataModel.py[89]    not exist anonymize_fields!
+2022-07-07 17:49:25,188 ERROR SyntheticDataModel.py[129] name 'LOGGER' is not defined
+2022-07-07 17:50:23,811 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 17:50:23,812 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 17:50:23,812 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 17:50:23,812 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 17:50:23,812 INFO synthetic_model_server.py[74]    model_type: GaussianCopula
+2022-07-07 17:50:23,812 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 17:50:23,813 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 17:50:23,813 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 17:50:23,813 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 17:50:23,813 INFO synthetic_model_server.py[80]    Traing and Sampling
+2022-07-07 17:50:23,959 INFO SyntheticDataModel.py[64]    table columns: 15
+2022-07-07 17:50:23,960 INFO SyntheticDataModel.py[65]    table rows: 32561
+2022-07-07 17:50:23,960 INFO SyntheticDataModel.py[69] Randomly select 1000 rows as train data from original 32561 rows
+2022-07-07 17:50:23,967 INFO SyntheticDataModel.py[75]    not exist primary key!
+2022-07-07 17:50:23,967 INFO SyntheticDataModel.py[89]    not exist anonymize_fields!
+2022-07-07 17:50:24,855 ERROR SyntheticDataModel.py[129] name 'LOGGER' is not defined
+2022-07-07 17:51:57,464 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 17:51:57,464 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 17:51:57,464 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 17:51:57,464 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 17:51:57,464 INFO synthetic_model_server.py[74]    model_type: GaussianCopula
+2022-07-07 17:51:57,464 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 17:51:57,465 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 17:51:57,465 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 17:51:57,465 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 17:51:57,465 INFO synthetic_model_server.py[80]    Traing and Sampling
+2022-07-07 17:51:57,608 INFO SyntheticDataModel.py[64]    table columns: 15
+2022-07-07 17:51:57,609 INFO SyntheticDataModel.py[65]    table rows: 32561
+2022-07-07 17:51:57,609 INFO SyntheticDataModel.py[69] Randomly select 1000 rows as train data from original 32561 rows
+2022-07-07 17:51:57,614 INFO SyntheticDataModel.py[75]    not exist primary key!
+2022-07-07 17:51:57,614 INFO SyntheticDataModel.py[89]    not exist anonymize_fields!
+2022-07-07 17:51:58,295 ERROR SyntheticDataModel.py[129] name 'LOGGER' is not defined
+2022-07-07 17:52:40,535 INFO synthetic_model_server.py[106] 启动服务，服务监听端口为:40053
+2022-07-07 17:52:45,919 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 17:52:45,920 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 17:52:45,920 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 17:52:45,920 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 17:52:45,920 INFO synthetic_model_server.py[74]    model_type: GaussianCopula
+2022-07-07 17:52:45,920 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 17:52:45,920 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 17:52:45,921 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 17:52:45,921 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 17:52:45,921 INFO synthetic_model_server.py[80]    Traing and Sampling
+2022-07-07 17:52:46,010 INFO SyntheticDataModel.py[64]    table columns: 15
+2022-07-07 17:52:46,010 INFO SyntheticDataModel.py[65]    table rows: 32561
+2022-07-07 17:52:46,010 INFO SyntheticDataModel.py[69] Randomly select 1000 rows as train data from original 32561 rows
+2022-07-07 17:52:46,014 INFO SyntheticDataModel.py[75]    not exist primary key!
+2022-07-07 17:52:46,015 INFO SyntheticDataModel.py[89]    not exist anonymize_fields!
+2022-07-07 17:52:49,788 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-07 17:52:49,788 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-07 17:52:49,789 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-07 17:52:49,789 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-07 17:52:49,789 INFO synthetic_model_server.py[74]    model_type: GaussianCopula
+2022-07-07 17:52:49,789 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-07 17:52:49,790 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-07 17:52:49,790 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-07 17:52:49,790 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-07 17:52:49,790 INFO synthetic_model_server.py[80]    Traing and Sampling
+2022-07-07 17:52:49,902 INFO SyntheticDataModel.py[64]    table columns: 15
+2022-07-07 17:52:49,902 INFO SyntheticDataModel.py[65]    table rows: 32561
+2022-07-07 17:52:49,903 INFO SyntheticDataModel.py[69] Randomly select 1000 rows as train data from original 32561 rows
+2022-07-07 17:52:49,909 INFO SyntheticDataModel.py[75]    not exist primary key!
+2022-07-07 17:52:49,909 INFO SyntheticDataModel.py[89]    not exist anonymize_fields!
+2022-07-07 17:53:01,030 INFO SyntheticDataModel.py[303] training finished.
+2022-07-07 17:53:01,035 INFO SyntheticDataModel.py[144] 模型保存成功！
+2022-07-07 17:53:03,502 INFO SyntheticDataModel.py[303] training finished.
+2022-07-07 17:53:03,505 INFO SyntheticDataModel.py[144] 模型保存成功！
