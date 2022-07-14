@@ -21,17 +21,21 @@ def send_request(model_save_path, sample_num_rows=1000):
 
 
 
-model_save_path = "example/models/example.pkl"
-sample_num_rows = 100
+# model_save_path = "example/models/example.pkl"
+# sample_num_rows = 100
+#
+#
+# status, synthetic_data, privacy_score = send_request(model_save_path=model_save_path, sample_num_rows=sample_num_rows)
+# print(status.code)
+# print(status.msg)
+# print(synthetic_data)
+# print(privacy_score)
 
 
-status, synthetic_data, privacy_score = send_request(model_save_path=model_save_path, sample_num_rows=sample_num_rows)
-print(status.code)
-print(status.msg)
-print(synthetic_data)
-print(privacy_score)
+from copulas.datasets import sample_trivariate_xyz
 
-
+data = sample_trivariate_xyz()
+data.head()
 
 
 

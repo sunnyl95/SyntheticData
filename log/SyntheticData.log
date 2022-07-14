@@ -42,3 +42,27 @@
 2022-07-08 09:47:39,448 INFO synthetic_sample_server.py[39]    model_save_path: example/models/example.pkl
 2022-07-08 09:47:39,448 INFO synthetic_sample_server.py[40]    sample_num_rows: 100
 2022-07-08 09:47:39,502 INFO SyntheticDataModel.py[206] The Data don't have sensitivate columns,so it don't have privacy_score
+2022-07-08 11:33:00,979 INFO synthetic_model_server.py[106] 启动服务，服务监听端口为:40053
+2022-07-08 11:33:08,018 INFO synthetic_model_server.py[61] ------ 接收仿真数据训练模型服务参数:
+2022-07-08 11:33:08,018 INFO synthetic_model_server.py[71]    real_data_file_path: example/data/adult.csv
+2022-07-08 11:33:08,018 INFO synthetic_model_server.py[72]    model_save_path: example/models/example.pkl
+2022-07-08 11:33:08,019 INFO synthetic_model_server.py[73]    tabel_type: tabular
+2022-07-08 11:33:08,019 INFO synthetic_model_server.py[74]    model_type: TVAE
+2022-07-08 11:33:08,019 INFO synthetic_model_server.py[75]    primary_key: 
+2022-07-08 11:33:08,019 INFO synthetic_model_server.py[76]    anonymize_fields: 
+2022-07-08 11:33:08,019 INFO synthetic_model_server.py[77]    sampling_or_not: True
+2022-07-08 11:33:08,019 INFO synthetic_model_server.py[79]    sample_num_rows: 100
+2022-07-08 11:33:08,019 INFO synthetic_model_server.py[80]    Traing and Sampling
+2022-07-08 11:33:08,183 INFO SyntheticDataModel.py[64]    table columns: 15
+2022-07-08 11:33:08,183 INFO SyntheticDataModel.py[65]    table rows: 32561
+2022-07-08 11:33:08,183 INFO SyntheticDataModel.py[69] Randomly select 1000 rows as train data from original 32561 rows
+2022-07-08 11:33:08,189 INFO SyntheticDataModel.py[74]    not exist primary key!
+2022-07-08 11:33:08,189 INFO SyntheticDataModel.py[88]    not exist anonymize_fields!
+2022-07-08 11:33:16,594 INFO SyntheticDataModel.py[300] training finished.
+2022-07-08 11:33:16,606 INFO SyntheticDataModel.py[145] 模型保存成功！
+2022-07-08 11:33:16,757 INFO SyntheticDataModel.py[206] The Data don't have sensitivate columns,so it don't have privacy_score
+2022-07-08 11:33:40,966 INFO synthetic_sample_server.py[59] 启动服务，服务监听端口为:40052
+2022-07-08 11:33:43,065 INFO synthetic_sample_server.py[34] ------ 接收仿真数据训练模型服务参数:
+2022-07-08 11:33:43,065 INFO synthetic_sample_server.py[39]    model_save_path: example/models/example.pkl
+2022-07-08 11:33:43,065 INFO synthetic_sample_server.py[40]    sample_num_rows: 100
+2022-07-08 11:33:43,203 INFO SyntheticDataModel.py[206] The Data don't have sensitivate columns,so it don't have privacy_score

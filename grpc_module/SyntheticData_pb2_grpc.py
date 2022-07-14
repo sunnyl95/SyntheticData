@@ -26,6 +26,7 @@ class SyntheticServiceStub(object):
                 )
 
 
+
 class SyntheticServiceServicer(object):
     """Missing associated documentation comment in .proto file."""
 

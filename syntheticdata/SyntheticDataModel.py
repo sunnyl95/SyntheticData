@@ -19,6 +19,7 @@ LOGGER = logging.getLogger('SyntheticData')
 class SyntheticDataModel:
     def __init__(self,
                  status,
+                 task_type = ""
                  real_data_file_path="",
                  model_save_path="",
                  tabel_type='tabular',

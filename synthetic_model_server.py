@@ -98,6 +98,7 @@ class Generator(SyntheticData_pb2_grpc.SyntheticServiceServicer):
                                                                              sample_num_rows).training_task()
 
 
+
         return SyntheticData_pb2.SyntheticResponse(status=status, synthetic_data=synthetic_data,
                                                    privacy_score=privacy_score)
 
