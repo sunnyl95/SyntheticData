@@ -2,16 +2,13 @@
 
 import logging
 import pickle
-import warnings
 import pandas as pd
 
 from grpc_module import SyntheticData_pb2
-from grpc_module import SyntheticData_pb2_grpc
-from syntheticdata.conf import config
-from syntheticdata.conf import fake
-from syntheticdata.MODEL import all_model
-from syntheticdata.metrics.tabular import NumericalLR, CategoricalEnsemble, CategoricalKNN
-from syntheticdata.tabular.model_tvae import TVAE
+from syntheticdata.config import config
+from syntheticdata.config import fake
+from syntheticdata.config.model_dict import model_dict
+from syntheticdata.metrics.single_table import CategoricalGeneralizedCAP,NumericalMLP
 
 LOGGER = logging.getLogger('SyntheticData')
 
@@ -19,7 +16,6 @@ LOGGER = logging.getLogger('SyntheticData')
 class SyntheticDataModel:
     def __init__(self,
                  status,
-                 task_type = ""
                  real_data_file_path="",
                  model_save_path="",
                  tabel_type='tabular',
@@ -60,15 +56,17 @@ class SyntheticDataModel:
         except Exception as error:
             LOGGER.error(error)
             self.status.code = SyntheticData_pb2.FILE_READ_ERROR
-            self.msg = '待识别数据表文件{}读取失败。'.format(self.real_data_file_path)
+            self.status.msg = '待识别数据表文件{}读取失败，请检测路径!'.format(self.real_data_file_path)
+
+            return
 
         LOGGER.info('   table columns: {}'.format(len(self.data.columns)))
         LOGGER.info('   table rows: {}'.format(len(self.data)))
 
-        # 随机获取n条数据作为训练数据
-        train_num = min(len(self.data), config.MAX_ROWS)
-        LOGGER.info('Randomly select {} rows as train data from original {} rows'.format(train_num, len(self.data)))
-        self.data = self.data.sample(train_num)
+        # # 随机获取n条数据作为训练数据,采样的数量和策略会影响仿真效果，因此暂不进行抽样训练，等调研后给出实施方案
+        # train_num = min(len(self.data), config.MAX_ROWS)
+        # LOGGER.info('   Randomly select {} rows as train data from original {} rows'.format(train_num, len(self.data)))
+        # self.data = self.data.sample(train_num)
 
         # 校验primary_key是否在数据中存在
         if self.primary_key == '':
@@ -81,7 +79,7 @@ class SyntheticDataModel:
                 self.status.code = SyntheticData_pb2.PRIMARY_NOT_EXIST_ERROR
                 self.status.msg = '数据中不存在这样的主键列--{}--,请检查！'.format(self.primary_key)
                 LOGGER.error(error)
-                pass
+                return
 
         # 校验anonymize_fields是否在数据表中存在
 
@@ -90,32 +88,33 @@ class SyntheticDataModel:
             self.anonymize_fields = None
         else:
             try:
-                anonymize_fields = eval(self.anonymize_fields)
-                for col, fake_col in anonymize_fields.items():
+                self.anonymize_fields = eval(self.anonymize_fields)
+                for col, fake_col in self.anonymize_fields.items():
                     if col not in data_columns:
                         self.status.code = SyntheticData_pb2.Anonymize_Fields_ERROR
-                        self.status.msg = '{anonymize_fields}中含有原始数据表中不存在的字段列，请检查！'.format(self.anonymize_fields)
+                        self.status.msg = '{}中含有原始数据表中不存在的字段列，请检查！'.format(self.anonymize_fields)
                         LOGGER.error(TypeError(f'column name \"{col}\" not in data.columns, Please check！'))
-                        pass
+                        return
 
                     if fake_col not in fake.FAKE_LIST:
                         self.status.code = SyntheticData_pb2.Anonymize_Fields_FAKER_ERROR
-                        self.status.msg = '当前不支持该名称 {} 表示的敏感字段匿名，请检查！'.format(fake_col)
+                        self.status.msg = '当前不支持该名称 {} 表示的敏感字段匿名，请检查！'.format(self.anonymize_fields)
                         LOGGER.error(TypeError(f'fake column name \"{col}\" not in supported list, Please check！'))
-                        pass
+                        return
             except Exception as error:
-                self.status.code = SyntheticData_pb2.Anonymize_Fields_ERROR
-                self.status.msg = '{anonymize_fields}不符合格式要求，请检查！'.format(self.anonymize_fields)
+                self.status.code = SyntheticData_pb2.PARAMETER_ERROR
+                self.status.msg = 'anonymize_fields参数{}不符合格式要求，请检查！'.format(self.anonymize_fields)
                 LOGGER.error(error)
-                pass
+                return
 
     def get_model(self):
+        LOGGER.info("   get model......")
+
         if self.status.code == SyntheticData_pb2.OK:
             try:
-                self._model = all_model[self.table_type][self.model_type]
-                print(self._model)
+                self._model = model_dict[self.table_type][self.model_type]
                 self._model = self._model(primary_key=self.primary_key, anonymize_fields=self.anonymize_fields,
-                                          verbose=True, epochs=10)  # 默认打印训练过程
+                                          verbose=True)  # 默认打印训练过程  #epochs=300
 
             except Exception as error:
                 self.status.code = SyntheticData_pb2.MODEL_INITIALIZATION_ERROR
@@ -123,6 +122,7 @@ class SyntheticDataModel:
                                                                                                   self.model_type)
 
     def fit_model(self):
+        LOGGER.info("   train starting......")
         try:
             self._model.fit(self.data)
         except Exception as error:
@@ -131,6 +131,7 @@ class SyntheticDataModel:
             LOGGER.error(error)
 
     def save_model(self):
+        LOGGER.info("   save model......")
         try:
             self.data = None  # 删除数据后保存模型
             tmp_status = self.status
@@ -139,11 +140,12 @@ class SyntheticDataModel:
                 pickle.dump(self, output)
             self.status = tmp_status
         except Exception as error:
+            self.status = tmp_status
             self.status.code = SyntheticData_pb2.MODEL_SAVE_ERROR
             self.status.msg = '模型保存失败，请检查路径{}！'.format(self.model_save_path)
             LOGGER.error(error)
 
-        LOGGER.info('模型保存成功！')
+        LOGGER.info('   model save successfully!')
 
     def get_params(self):
         params = {}
@@ -192,22 +194,14 @@ class SyntheticDataModel:
         若敏感数据列是Categorical类型，则只能用Categorical类型数据训练模型
         若敏感数据列是Numerical类型，则只能用Numerical类型数据训练模型
         当前不支持两种类型的数据混合训练模型，这也是后期需优化的点。（目前只能用同类型的字段预测同类型的敏感字段，然而正常情况会利用所有字段预测目标字段，因此该方式从理论上降低了隐私性评估的标准，需进一步完善）
-
-
-        @param real_data(dataframe):
-            真实数据
-        @param synthetic_data(dataframe):
-            合成数据
-        @param anonymize_fields(list):
-            敏感数据列, default=None
-        @return: score(float)
         '''
 
+        LOGGER.info("   compute privacy score starting......")
         if self.anonymize_fields is None:
-            LOGGER.info("The Data don't have sensitivate columns,so it don't have privacy_score")
+            LOGGER.info("   The Data don't have sensitivate columns,so it don't have privacy_score")
             return None
 
-        privacy_score = None
+        privacy_score = 0
 
         # 空值处理
         def fill_null(df):
@@ -226,13 +220,13 @@ class SyntheticDataModel:
             return df
 
         try:
-            if self.data is not None:
+            if self.data is  None:
                 try:
                     real_data = pd.read_csv(self.real_data_file_path, dtype=str)
                 except Exception as error:
                     LOGGER.error(error)
                     self.status.code = SyntheticData_pb2.FILE_READ_ERROR
-                    self.msg = '待识别数据表文件{}读取失败。'.format(self.real_data_file_path)
+                    self.status.msg = '待识别数据表文件{}读取失败，请检测路径!'.format(self.real_data_file_path)
                     return None
 
             else:
@@ -246,6 +240,7 @@ class SyntheticDataModel:
             numberical_privacy = 0
             categorical_columns = []
             categorical_privacy = 0
+
 
             for column in self.anonymize_fields.keys():
                 dtype = real_data[column].dtype.name
@@ -261,7 +256,7 @@ class SyntheticDataModel:
                     include='float').columns
                 key_fields = list(set(key_fields) - set(numberical_columns))
 
-                numberical_privacy = CategoricalKNN.compute(real_data, synthetic_data, key_fields=key_fields,
+                numberical_privacy =  NumericalMLP.compute(real_data, synthetic_data, key_fields=key_fields,
                                                             sensitive_fields=numberical_columns)
 
             if len(categorical_columns) > 0:
@@ -269,12 +264,21 @@ class SyntheticDataModel:
                     real_data.select_dtypes(include='object').columns)
                 key_fields = list(set(key_fields) - set(categorical_columns))
 
-                categorical_privacy = CategoricalKNN.compute(real_data, synthetic_data, key_fields=key_fields,
+                categorical_privacy = CategoricalGeneralizedCAP.compute(real_data, synthetic_data, key_fields=key_fields,
                                                              sensitive_fields=categorical_columns)
 
-            return (numberical_privacy + categorical_privacy) / 2
+            LOGGER.info("   compute privacy score Finished!")
+
+
+            if str(categorical_privacy).isdigit():
+                privacy_score = +categorical_privacy
+            if str(numberical_privacy).isdigit():
+                privacy_score = + numberical_privacy
+
+            return  privacy_score
 
         except Exception as error:
+
             self.status.code = SyntheticData_pb2.PRIVACY_SCORE_ERROR
             self.status.msg = '计算仿真数据的隐私性失败'
             LOGGER.error(error)
@@ -298,7 +302,7 @@ class SyntheticDataModel:
         # 4.模型保存
         if self.status.code != SyntheticData_pb2.OK:
             return self.status, None, None
-        LOGGER.info('training finished.')
+        LOGGER.info('   training finished.')
         self.trained = True
         self.save_model()
 
@@ -319,12 +323,12 @@ class SyntheticDataModel:
         # 1.加载模型
         model = self.load_model()
 
-        print(model)
 
         # 2.生成仿真数据
         if self.status.code != SyntheticData_pb2.OK:
             return self.status, None, None
         synthetic_data = model.sample()
+
 
         # 3.计算隐私性保护得分
         if self.status.code != SyntheticData_pb2.OK:

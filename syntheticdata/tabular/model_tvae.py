@@ -1,13 +1,8 @@
 """Wrapper around CTGAN model."""
 
 import numpy as np
-#from ctgan.ctgan.synthesizers import CTGANSynthesizer, TVAESynthesizer
 
-import sys
-sys.path.append("..")
-
-from ctgan.synthesizers.tvae import TVAESynthesizer
-
+from syntheticdata.ctgan.synthesizers.tvae import  TVAESynthesizer
 
 from syntheticdata.tabular.base import BaseTabularModel
 

@@ -1,2 +1,2 @@
-1、synthetic_pb2.py和synthetic_pb2_grpc.py两个文件是通过下面的命令生成的
-python -m grpc_tools.protoc --proto_path=./proto --python_out=./grpc_module --grpc_python_out=./grpc_module  synthetic.proto
+1、synthetic_pb2.py和synthetic_pb2_grpc.py两个文件是通过在根目录下执行下述命令生成
+python -m grpc_tools.protoc --proto_path=./proto --python_out=./grpc_module --grpc_python_out=./grpc_module  SyntheticData.proto

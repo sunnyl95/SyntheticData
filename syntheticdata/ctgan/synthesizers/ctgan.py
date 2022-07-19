@@ -10,9 +10,10 @@ from packaging import version
 from torch import optim
 from torch.nn import BatchNorm1d, Dropout, LeakyReLU, Linear, Module, ReLU, Sequential, functional
 
-from ctgan.data_sampler import DataSampler
-from ctgan.data_transformer import DataTransformer
-from ctgan.synthesizers.base import BaseSynthesizer, random_state
+from syntheticdata.ctgan.data_sampler import DataSampler
+from syntheticdata.ctgan.data_transformer import DataTransformer
+from syntheticdata.ctgan.synthesizers.base import BaseSynthesizer, random_state
+
 
 
 class Discriminator(Module):
@@ -421,7 +422,6 @@ class CTGANSynthesizer(BaseSynthesizer):
 
             ep_et = time.time()
 
-            print(self._verbose)
             if self._verbose:
                 print(f'Epoch {i+1},  Cost Time {(ep_et-ep_st):.2f} s,  Loss G: {loss_g.detach().cpu(): .4f},'  # noqa: T001
                       f'Loss D: {loss_d.detach().cpu(): .4f}',

@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-from . import SyntheticData_pb2 as SyntheticData__pb2
+from  . import SyntheticData_pb2 as SyntheticData__pb2
 
 
 class SyntheticServiceStub(object):
@@ -24,7 +24,6 @@ class SyntheticServiceStub(object):
                 request_serializer=SyntheticData__pb2.SyntheticSampleRequest.SerializeToString,
                 response_deserializer=SyntheticData__pb2.SyntheticResponse.FromString,
                 )
-
 
 
 class SyntheticServiceServicer(object):
