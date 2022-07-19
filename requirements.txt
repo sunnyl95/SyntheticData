@@ -1,0 +1,16 @@
+copulas==0.6.1
+Faker==9.9.1
+graphviz==0.19.1
+grpc==1.0.0
+grpcio==1.47.0
+ipython==8.4.0
+numpy==1.21.5
+packaging==21.3
+pandas==1.4.0
+protobuf==4.21.2
+rdt==0.6.4
+scikit_learn==1.1.1
+scipy==1.7.3
+setuptools==58.0.4
+torch==1.10.1
+tqdm==4.62.3
