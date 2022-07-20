@@ -97,7 +97,7 @@ def _loss_function(recon_x, x, sigmas, mu, logvar, output_info, factor):
                 st = ed
 
     assert st == recon_x.size()[1]
-    KLD = -0.5 * torch.sum(1 + logvar - mu**2 - logvar.exp())
+    KLD = -0.5 * torch.sum(1 + logvar - mu ** 2 - logvar.exp())
     return sum(loss) * factor / x.size()[0], KLD / x.size()[0]
 
 
@@ -105,16 +105,16 @@ class TVAESynthesizer(BaseSynthesizer):
     """TVAESynthesizer."""
 
     def __init__(
-        self,
-        embedding_dim=128,
-        compress_dims=(128, 128),
-        decompress_dims=(128, 128),
-        l2scale=1e-5,
-        batch_size=500,
-        epochs=300,
-        loss_factor=2,
-        cuda=True,
-        verbose=True,
+            self,
+            embedding_dim=128,
+            compress_dims=(128, 128),
+            decompress_dims=(128, 128),
+            l2scale=1e-5,
+            batch_size=500,
+            epochs=300,
+            loss_factor=2,
+            cuda=True,
+            verbose=True,
     ):
 
         self.embedding_dim = embedding_dim
@@ -183,9 +183,9 @@ class TVAESynthesizer(BaseSynthesizer):
             ep_et = time.time()
 
             if self.verbose:
-                print(f'Epoch {i+1},  Cost Time {(ep_et-ep_st):.2f} s,  Loss G: {loss.detach().cpu(): .4f},',  # noqa: T001
+                print(f'Epoch {i + 1},  Cost Time {(ep_et - ep_st):.2f} s,  Loss G: {loss.detach().cpu(): .4f},',
+                      # noqa: T001
                       flush=True)
-
 
     @random_state
     def sample(self, samples):

@@ -40,7 +40,7 @@ def model_check_param(status, real_data_file_path, model_save_path, tabel_type, 
         status.msg = '是否生成仿真数据参数 sampling_or_not 不能为空,且必须为bool类型参数。'
         return status
 
-    if sampling_or_not and (sample_num_rows == '' or (not str(sample_num_rows).isdecimal())):
+    if sampling_or_not and (sample_num_rows == '' or (not str(sample_num_rows).isdecimal()) or (sample_num_rows < 1)):
         status.code = SyntheticData_pb2.PARAMETER_ERROR
         status.msg = 'sampling_or_not为True时，参数 sample_num_rows 不能为空，且sample_num_rows必须为正整数。'
         return status
@@ -60,7 +60,7 @@ def sample_check_param(status, model_save_path, sample_num_rows):
         status.msg = '模型路径参数 model_save_path 不能为空。'
         return status
 
-    if (sample_num_rows == '') or (not str(sample_num_rows).isdecimal()):
+    if (sample_num_rows == '') or (not str(sample_num_rows).isdecimal()) or (sample_num_rows < 1):
         status.code = SyntheticData_pb2.PARAMETER_ERROR
         status.msg = '参数 sample_num_rows 不能为空，且sample_num_rows必须为正整数。'
         return status

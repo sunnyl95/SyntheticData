@@ -56,10 +56,10 @@ def _max_repeat(options, max_repeat):
             generators.append(_from_generators(repeat_generators, max_repeat))
 
     return (
-        value
-        for generator in generators
-        for value in generator
-    ), np.sum(sizes) + int(min_ == 0)
+               value
+               for generator in generators
+               for value in generator
+           ), np.sum(sizes) + int(min_ == 0)
 
 
 def _category_chars(regex):

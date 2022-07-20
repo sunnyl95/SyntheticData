@@ -15,7 +15,6 @@ from syntheticdata.ctgan.data_transformer import DataTransformer
 from syntheticdata.ctgan.synthesizers.base import BaseSynthesizer, random_state
 
 
-
 class Discriminator(Module):
     """Discriminator for the CTGANSynthesizer."""
 
@@ -423,9 +422,10 @@ class CTGANSynthesizer(BaseSynthesizer):
             ep_et = time.time()
 
             if self._verbose:
-                print(f'Epoch {i+1},  Cost Time {(ep_et-ep_st):.2f} s,  Loss G: {loss_g.detach().cpu(): .4f},'  # noqa: T001
-                      f'Loss D: {loss_d.detach().cpu(): .4f}',
-                      flush=True)
+                print(
+                    f'Epoch {i + 1},  Cost Time {(ep_et - ep_st):.2f} s,  Loss G: {loss_g.detach().cpu(): .4f},'  # noqa: T001
+                    f'Loss D: {loss_d.detach().cpu(): .4f}',
+                    flush=True)
 
     @random_state
     def sample(self, n, condition_column=None, condition_value=None):

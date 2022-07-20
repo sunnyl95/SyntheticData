@@ -68,12 +68,12 @@ class SingleTableMetric(BaseMetric):
         """
         fields = []
         if isinstance(types, str):
-            types = (types, )
+            types = (types,)
 
         for field_name, field_meta in metadata['fields'].items():
             field_type = field_meta['type']
             field_subtype = field_meta.get('subtype')
-            if any(t in types for t in (field_type, (field_type, ), (field_type, field_subtype))):
+            if any(t in types for t in (field_type, (field_type,), (field_type, field_subtype))):
                 fields.append(field_name)
 
         if len(fields) == 0:

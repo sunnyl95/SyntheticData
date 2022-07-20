@@ -19,7 +19,7 @@ message SyntheticModelRequest{
   string real_data_file_path = 1;
 
   // 模型保存/加载 路径
-  string  model_save_path= 2;
+  string  model_save_path = 2;
 
   // 数据表类型，分为三类：["tabular":"单表"， "relational":"关系表", "timeseries":"时间序列表"],目前仅支持"tabular"
   string tabel_type = 3;
@@ -47,7 +47,7 @@ message SyntheticModelRequest{
 // 仿真数据生成样本数据服务请求
 message SyntheticSampleRequest{
   // 模型保存/加载 路径
-  string  model_save_path= 4;
+  string  model_save_path = 4;
 
   // 欲生成仿真数据的条数
   int32 sample_num_rows = 9 ;
@@ -70,53 +70,53 @@ message SyntheticResponse{
 
 // 接口请求的应答状态码、消息
 message Status {
-    // 应答状态码
-    StatusCode code = 1;
+  // 应答状态码
+  StatusCode code = 1;
 
-    // 应答消息
-    string msg = 2;
+  // 应答消息
+  string msg = 2;
 }
 
 
 // 应答状态码枚举值
 enum StatusCode {
-    // 服务请求成功，响应成功
-    OK = 0;
+  // 服务请求成功，响应成功
+  OK = 0;
 
-    // 参数不存在、参数格式有误等,均属于参数有误
-    PARAMETER_ERROR = 10000;
+  // 参数不存在、参数格式有误等,均属于参数有误
+  PARAMETER_ERROR = 10000;
 
-    // 读取数据文件失败
-    FILE_READ_ERROR = 10001;
-
-
-    //主键列名错误，原始数据表不存在该主键列名
-    PRIMARY_NOT_EXIST_ERROR = 10002;
+  // 读取数据文件失败
+  FILE_READ_ERROR = 10001;
 
 
-    //敏感字段错误，原始数据表不存在该敏感字段
-    Anonymize_Fields_ERROR = 10003;
+  //主键列名错误，原始数据表不存在该主键列名
+  PRIMARY_NOT_EXIST_ERROR = 10002;
 
-    //敏感字段错误，需要匿名的字段映射到Faker的名称有误
-    Anonymize_Fields_FAKER_ERROR = 10004;
 
-    //模型初始化失败
-    MODEL_INITIALIZATION_ERROR  = 10005;
+  //敏感字段错误，原始数据表不存在该敏感字段
+  Anonymize_Fields_ERROR = 10003;
 
-    //模型训练失败
-    MODEL_TRAIN_ERROR = 10006;
+  //敏感字段错误，需要匿名的字段映射到Faker的名称有误
+  Anonymize_Fields_FAKER_ERROR = 10004;
 
-    //模型保存失败
-    MODEL_SAVE_ERROR = 10007;
+  //模型初始化失败
+  MODEL_INITIALIZATION_ERROR = 10005;
 
-    //模型加载失败
-    MODEL_LOAD_ERROR = 10008;
+  //模型训练失败
+  MODEL_TRAIN_ERROR = 10006;
 
-    //生成仿真样本数据失败
-    SAMPLE_DATA_GENERATOR_ERROR = 10009;
+  //模型保存失败
+  MODEL_SAVE_ERROR = 10007;
 
-    //计算仿真数据的隐私性失败
-    PRIVACY_SCORE_ERROR = 10010;
+  //模型加载失败
+  MODEL_LOAD_ERROR = 10008;
+
+  //生成仿真样本数据失败
+  SAMPLE_DATA_GENERATOR_ERROR = 10009;
+
+  //计算仿真数据的隐私性失败
+  PRIVACY_SCORE_ERROR = 10010;
 
 
 }

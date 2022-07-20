@@ -215,8 +215,8 @@ class CopulaGAN(CTGAN):
             field_name = field.replace('.value', '')
 
             if field_name in fields and fields.get(
-                field_name,
-                dict(),
+                    field_name,
+                    dict(),
             ).get('type') != 'categorical':
                 transformers[field] = GaussianCopulaTransformer(
                     distribution=distributions.get(field_name, self._default_distribution)

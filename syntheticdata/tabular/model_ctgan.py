@@ -2,6 +2,7 @@
 
 import numpy as np
 import sys
+
 sys.path.append("..")
 
 from syntheticdata.ctgan.synthesizers import CTGANSynthesizer

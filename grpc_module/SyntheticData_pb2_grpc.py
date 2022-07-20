@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-from  . import SyntheticData_pb2 as SyntheticData__pb2
+from . import SyntheticData_pb2 as SyntheticData__pb2
 
 
 class SyntheticServiceStub(object):
@@ -15,15 +15,15 @@ class SyntheticServiceStub(object):
             channel: A grpc.Channel.
         """
         self.SyntheticModel = channel.unary_unary(
-                '/syntheticdata.api.v1.SyntheticService/SyntheticModel',
-                request_serializer=SyntheticData__pb2.SyntheticModelRequest.SerializeToString,
-                response_deserializer=SyntheticData__pb2.SyntheticResponse.FromString,
-                )
+            '/syntheticdata.api.v1.SyntheticService/SyntheticModel',
+            request_serializer=SyntheticData__pb2.SyntheticModelRequest.SerializeToString,
+            response_deserializer=SyntheticData__pb2.SyntheticResponse.FromString,
+        )
         self.SyntheticSample = channel.unary_unary(
-                '/syntheticdata.api.v1.SyntheticService/SyntheticSample',
-                request_serializer=SyntheticData__pb2.SyntheticSampleRequest.SerializeToString,
-                response_deserializer=SyntheticData__pb2.SyntheticResponse.FromString,
-                )
+            '/syntheticdata.api.v1.SyntheticService/SyntheticSample',
+            request_serializer=SyntheticData__pb2.SyntheticSampleRequest.SerializeToString,
+            response_deserializer=SyntheticData__pb2.SyntheticResponse.FromString,
+        )
 
 
 class SyntheticServiceServicer(object):
@@ -45,56 +45,56 @@ class SyntheticServiceServicer(object):
 
 def add_SyntheticServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'SyntheticModel': grpc.unary_unary_rpc_method_handler(
-                    servicer.SyntheticModel,
-                    request_deserializer=SyntheticData__pb2.SyntheticModelRequest.FromString,
-                    response_serializer=SyntheticData__pb2.SyntheticResponse.SerializeToString,
-            ),
-            'SyntheticSample': grpc.unary_unary_rpc_method_handler(
-                    servicer.SyntheticSample,
-                    request_deserializer=SyntheticData__pb2.SyntheticSampleRequest.FromString,
-                    response_serializer=SyntheticData__pb2.SyntheticResponse.SerializeToString,
-            ),
+        'SyntheticModel': grpc.unary_unary_rpc_method_handler(
+            servicer.SyntheticModel,
+            request_deserializer=SyntheticData__pb2.SyntheticModelRequest.FromString,
+            response_serializer=SyntheticData__pb2.SyntheticResponse.SerializeToString,
+        ),
+        'SyntheticSample': grpc.unary_unary_rpc_method_handler(
+            servicer.SyntheticSample,
+            request_deserializer=SyntheticData__pb2.SyntheticSampleRequest.FromString,
+            response_serializer=SyntheticData__pb2.SyntheticResponse.SerializeToString,
+        ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'syntheticdata.api.v1.SyntheticService', rpc_method_handlers)
+        'syntheticdata.api.v1.SyntheticService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
- # This class is part of an EXPERIMENTAL API.
+# This class is part of an EXPERIMENTAL API.
 class SyntheticService(object):
     """Missing associated documentation comment in .proto file."""
 
     @staticmethod
     def SyntheticModel(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+                       target,
+                       options=(),
+                       channel_credentials=None,
+                       call_credentials=None,
+                       insecure=False,
+                       compression=None,
+                       wait_for_ready=None,
+                       timeout=None,
+                       metadata=None):
         return grpc.experimental.unary_unary(request, target, '/syntheticdata.api.v1.SyntheticService/SyntheticModel',
-            SyntheticData__pb2.SyntheticModelRequest.SerializeToString,
-            SyntheticData__pb2.SyntheticResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+                                             SyntheticData__pb2.SyntheticModelRequest.SerializeToString,
+                                             SyntheticData__pb2.SyntheticResponse.FromString,
+                                             options, channel_credentials,
+                                             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def SyntheticSample(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+                        target,
+                        options=(),
+                        channel_credentials=None,
+                        call_credentials=None,
+                        insecure=False,
+                        compression=None,
+                        wait_for_ready=None,
+                        timeout=None,
+                        metadata=None):
         return grpc.experimental.unary_unary(request, target, '/syntheticdata.api.v1.SyntheticService/SyntheticSample',
-            SyntheticData__pb2.SyntheticSampleRequest.SerializeToString,
-            SyntheticData__pb2.SyntheticResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+                                             SyntheticData__pb2.SyntheticSampleRequest.SerializeToString,
+                                             SyntheticData__pb2.SyntheticResponse.FromString,
+                                             options, channel_credentials,
+                                             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

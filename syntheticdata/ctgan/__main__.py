@@ -35,10 +35,10 @@ def _parse_args():
                         help='Dimension of input z to the generator.')
     parser.add_argument('--generator_dim', type=str, default='256,256',
                         help='Dimension of each generator layer. '
-                        'Comma separated integers with no whitespaces.')
+                             'Comma separated integers with no whitespaces.')
     parser.add_argument('--discriminator_dim', type=str, default='256,256',
                         help='Dimension of each discriminator layer. '
-                        'Comma separated integers with no whitespaces.')
+                             'Comma separated integers with no whitespaces.')
 
     parser.add_argument('--batch_size', type=int, default=500,
                         help='Batch size. Must be an even number.')

@@ -8,7 +8,7 @@ from grpc_module import SyntheticData_pb2
 from syntheticdata.config import config
 from syntheticdata.config import fake
 from syntheticdata.config.model_dict import model_dict
-from syntheticdata.metrics.single_table import CategoricalGeneralizedCAP,NumericalMLP
+from syntheticdata.metrics.single_table import CategoricalGeneralizedCAP, NumericalMLP
 
 LOGGER = logging.getLogger('SyntheticData')
 
@@ -16,13 +16,13 @@ LOGGER = logging.getLogger('SyntheticData')
 class SyntheticDataModel:
     def __init__(self,
                  status,
-                 real_data_file_path="",
-                 model_save_path="",
-                 tabel_type='tabular',
-                 model_type='TVAE',
+                 real_data_file_path=None,
+                 model_save_path=None,
+                 tabel_type=None,
+                 model_type=None,
                  primary_key=None,
                  anonymize_fields=None,
-                 sampling_or_not=True,
+                 sampling_or_not=False,
                  sample_num_rows=1000):
         '''
 
@@ -134,18 +134,23 @@ class SyntheticDataModel:
         LOGGER.info("   save model......")
         try:
             self.data = None  # 删除数据后保存模型
+
+            # 由于状态是基于proto3的变量，pickle无法保存，因此这里先置为空，重新定义两个变量存储下来
             tmp_status = self.status
-            self.status = None  # 无需保存状态
+            self.status_code = self.status.code
+            self.status_msg = self.status.msg
+            self.status = None
+
             with open(self.model_save_path, 'wb') as output:
                 pickle.dump(self, output)
+
             self.status = tmp_status
+            LOGGER.info('   model save successfully!')
         except Exception as error:
             self.status = tmp_status
             self.status.code = SyntheticData_pb2.MODEL_SAVE_ERROR
             self.status.msg = '模型保存失败，请检查路径{}！'.format(self.model_save_path)
             LOGGER.error(error)
-
-        LOGGER.info('   model save successfully!')
 
     def get_params(self):
         params = {}
@@ -172,11 +177,14 @@ class SyntheticDataModel:
             LOGGER.error(error)
         return model
 
-    def sample(self):
+    def sample(self, sample_num_rows):
+        if sample_num_rows is None:
+            sample_num_rows = self.sample_num_rows
+
         synthetic_data = pd.DataFrame()
         if self._model is not None and self.trained:
             try:
-                synthetic_data = self._model.sample(num_rows=self.sample_num_rows)
+                synthetic_data = self._model.sample(num_rows=sample_num_rows)
             except Exception as error:
                 self.status.code = SyntheticData_pb2.SAMPLE_DATA_GENERATOR_ERROR
                 self.status.msg = '生成仿真样本数据失败'
@@ -189,6 +197,7 @@ class SyntheticDataModel:
         1、计算合成数据的隐私性
         通过合成数据，攻击者是否可以预测真实数据集中的敏感数据列。
         模型通过合成数据的非敏感字段学习拟合敏感数据列，然后用模型预测真实数据的敏感字段，评估预测值在真实数据上的准确性。
+        计算公式：1-match_count/total_count,因此得分越高隐私性保护的越好，得分为0表示全部预测准确，得分为1表示全部预测错误
 
         2、字段类型要求
         若敏感数据列是Categorical类型，则只能用Categorical类型数据训练模型
@@ -198,8 +207,8 @@ class SyntheticDataModel:
 
         LOGGER.info("   compute privacy score starting......")
         if self.anonymize_fields is None:
-            LOGGER.info("   The Data don't have sensitivate columns,so it don't have privacy_score")
-            return None
+            LOGGER.info("   The Data don't have sensitivate columns,so its privacy_score is 1")
+            return 1
 
         privacy_score = 0
 
@@ -220,7 +229,7 @@ class SyntheticDataModel:
             return df
 
         try:
-            if self.data is  None:
+            if self.data is None:
                 try:
                     real_data = pd.read_csv(self.real_data_file_path, dtype=str)
                 except Exception as error:
@@ -241,7 +250,6 @@ class SyntheticDataModel:
             categorical_columns = []
             categorical_privacy = 0
 
-
             for column in self.anonymize_fields.keys():
                 dtype = real_data[column].dtype.name
                 # 1、Numberical Type
@@ -256,26 +264,26 @@ class SyntheticDataModel:
                     include='float').columns
                 key_fields = list(set(key_fields) - set(numberical_columns))
 
-                numberical_privacy =  NumericalMLP.compute(real_data, synthetic_data, key_fields=key_fields,
-                                                            sensitive_fields=numberical_columns)
+                numberical_privacy = NumericalMLP.compute(real_data, synthetic_data, key_fields=key_fields,
+                                                          sensitive_fields=numberical_columns)
 
             if len(categorical_columns) > 0:
                 key_fields = list(real_data.select_dtypes(include='bool').columns) + list(
                     real_data.select_dtypes(include='object').columns)
                 key_fields = list(set(key_fields) - set(categorical_columns))
 
-                categorical_privacy = CategoricalGeneralizedCAP.compute(real_data, synthetic_data, key_fields=key_fields,
-                                                             sensitive_fields=categorical_columns)
+                categorical_privacy = CategoricalGeneralizedCAP.compute(real_data, synthetic_data,
+                                                                        key_fields=key_fields,
+                                                                        sensitive_fields=categorical_columns)
 
             LOGGER.info("   compute privacy score Finished!")
 
+            if isinstance(categorical_privacy, float) or isinstance(categorical_privacy, int):
+                privacy_score += categorical_privacy
+            if isinstance(numberical_privacy, float) or isinstance(numberical_privacy, int):
+                privacy_score += numberical_privacy
 
-            if str(categorical_privacy).isdigit():
-                privacy_score = +categorical_privacy
-            if str(numberical_privacy).isdigit():
-                privacy_score = + numberical_privacy
-
-            return  privacy_score
+            return privacy_score
 
         except Exception as error:
 
@@ -306,16 +314,15 @@ class SyntheticDataModel:
         self.trained = True
         self.save_model()
 
-        if self.status.code == SyntheticData_pb2.OK:
-            self.status.msg = '模型训练成功，并成功保存！'
-
         # 5.生成仿真数据样本
         if self.status.code != SyntheticData_pb2.OK:
             return self.status, None, None
         if self.sampling_or_not:
             return self.sampling_task()
 
-        return self.status, None, None
+        self.status.msg = '模型训练成功，并成功保存！（该任务类型是仅训练模型，不生成仿真数据样本，因此隐私性得分为1）'
+        #若没有进行仿真数据生成样本数据服务，则隐私性得分为1
+        return self.status, None, 1
 
     def sampling_task(self):
         synthetic_data = pd.DataFrame()
@@ -323,17 +330,20 @@ class SyntheticDataModel:
         # 1.加载模型
         model = self.load_model()
 
-
         # 2.生成仿真数据
         if self.status.code != SyntheticData_pb2.OK:
             return self.status, None, None
-        synthetic_data = model.sample()
-
+        synthetic_data = model.sample(self.sample_num_rows)
+        self.status.code = model.status_code
+        self.status.msg = model.status_msg
 
         # 3.计算隐私性保护得分
         if self.status.code != SyntheticData_pb2.OK:
             return self.status, synthetic_data.to_json(), privacy_score
         privacy_score = model.get_privacy_score(synthetic_data=synthetic_data)
+
+        self.status.code = model.status_code
+        self.status.msg = model.status_msg
 
         # 4.返回结果
         if self.status.code == SyntheticData_pb2.OK:

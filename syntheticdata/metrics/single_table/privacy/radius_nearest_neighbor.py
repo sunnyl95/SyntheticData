@@ -87,7 +87,7 @@ class InverseCDFCutoff(InverseCDFDistance):
     def __init__(self, p=2, cutoff=0.1):
         self.p = p
         self.cdfs = []
-        self.cutoff = cutoff**p
+        self.cutoff = cutoff ** p
 
     def fit(self, data, cols):
         """Fits univariate distributions (automatically selected).

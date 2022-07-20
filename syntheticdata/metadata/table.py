@@ -169,7 +169,7 @@ class Table:
                 The Faker object to anonymize the data in the field using its functions.
         """
         pii_locales = field_metadata.get('pii_locales', None)
-        #return Faker(locale=pii_locales)   #Faker('zh_CN', locale=pii_locales)
+        # return Faker(locale=pii_locales)   #Faker('zh_CN', locale=pii_locales)
 
         return Faker(locale='zh_CN')
 
@@ -656,9 +656,9 @@ class Table:
             generator, max_size = strings_from_regex(regex)
             if max_size < length:
                 raise ValueError((
-                    'Unable to generate {} unique values for regex {}, the '
-                    'maximum number of unique values is {}.'
-                ).format(length, regex, max_size))
+                                     'Unable to generate {} unique values for regex {}, the '
+                                     'maximum number of unique values is {}.'
+                                 ).format(length, regex, max_size))
             values = [next(generator) for _ in range(length)]
 
             return pd.Series(list(values)[:length])

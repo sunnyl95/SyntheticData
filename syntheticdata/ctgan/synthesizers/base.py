@@ -44,6 +44,7 @@ def random_state(function):
         function (Callable):
             The function to wrap around.
     """
+
     def wrapper(self, *args, **kwargs):
         if self.random_states is None:
             return function(self, *args, **kwargs)
@@ -94,9 +95,9 @@ class BaseSynthesizer:
                 torch.Generator().manual_seed(random_state),
             )
         elif (
-            isinstance(random_state, tuple) and
-            isinstance(random_state[0], np.random.RandomState) and
-            isinstance(random_state[1], torch.Generator)
+                isinstance(random_state, tuple) and
+                isinstance(random_state[0], np.random.RandomState) and
+                isinstance(random_state[1], torch.Generator)
         ):
             self.random_states = random_state
         else:

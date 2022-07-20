@@ -1,5 +1,12 @@
 import unittest
 import grpc
+import sys
+import os
+
+curPath = os.path.abspath(os.path.dirname(__file__))
+rootPath = os.path.split(curPath)[0]
+sys.path.append(rootPath)
+
 from grpc_module import SyntheticData_pb2, SyntheticData_pb2_grpc
 from syntheticdata.config import config
 
@@ -148,7 +155,7 @@ class TestSyntheticDataServiceTrainingErrors(unittest.TestCase):
         tabel_type = 'tabular'
         model_type = 'TVAE'
         sampling_or_not = False
-        anonymize_fields = "{'test': 'name'}"    #'test'不存在在原始数据表字段中
+        anonymize_fields = "{'test': 'name'}"  # 'test'不存在在原始数据表字段中
         status, synthetic_data, privacy_score = send_request(real_data_file_path=real_data_file_path,
                                                              model_save_path=model_save_path,
                                                              tabel_type=tabel_type,
@@ -167,7 +174,7 @@ class TestSyntheticDataServiceTrainingErrors(unittest.TestCase):
         tabel_type = 'tabular'
         model_type = 'TVAE'
         sampling_or_not = False
-        anonymize_fields = "{'age': 'test'}"   #  'test'不存在在fake列表中
+        anonymize_fields = "{'age': 'test'}"  # 'test'不存在在fake列表中
         status, synthetic_data, privacy_score = send_request(real_data_file_path=real_data_file_path,
                                                              model_save_path=model_save_path,
                                                              tabel_type=tabel_type,
@@ -185,7 +192,7 @@ class TestSyntheticDataServiceTrainingErrors(unittest.TestCase):
         tabel_type = 'tabular'
         model_type = 'TVAE'
         sampling_or_not = False
-        anonymize_fields = "{'age': 'test}"    #传入的字典格式不对，test右侧少了个引号
+        anonymize_fields = "{'age': 'test}"  # 传入的字典格式不对，test右侧少了个引号
         status, synthetic_data, privacy_score = send_request(real_data_file_path=real_data_file_path,
                                                              model_save_path=model_save_path,
                                                              tabel_type=tabel_type,
@@ -196,8 +203,6 @@ class TestSyntheticDataServiceTrainingErrors(unittest.TestCase):
         self.assertEqual(status.msg, 'anonymize_fields参数{}不符合格式要求，请检查！'.format(anonymize_fields))
         self.assertEqual(synthetic_data, '')
         self.assertEqual(privacy_score, 0)
-
-
 
     def test_model_initialization_error(self):
         real_data_file_path = 'tests/data/adult.csv'
@@ -235,7 +240,7 @@ class TestSyntheticDataServiceTrainingErrors(unittest.TestCase):
 
 class TestSyntheticDataServiceTrainingSuccess(unittest.TestCase):
     def test_train_tvae_success_train_sample(self):
-        #测试TVAE模型，训练完成后生成仿真数据
+        # 测试TVAE模型，训练完成后生成仿真数据
         real_data_file_path = "tests/data/adult.csv"
         model_save_path = "tests/models/tvae.pkl"
         tabel_type = "tabular"
@@ -256,25 +261,25 @@ class TestSyntheticDataServiceTrainingSuccess(unittest.TestCase):
         print("privacy_score:\n", privacy_score)
 
     def test_train_tvae_success_only_train(self):
-            # 测试TVAE模型，仅训练，不生成仿真数据
-            real_data_file_path = "tests/data/adult.csv"
-            model_save_path = "tests/models/tvae.pkl"
-            tabel_type = "tabular"
-            model_type = "TVAE"
-            anonymize_fields = "{'native-country':'country'}"
-            sampling_or_not = False
-            # sample_num_rows = 100
-            status, synthetic_data, privacy_score = send_request(real_data_file_path=real_data_file_path,
-                                                                 model_save_path=model_save_path,
-                                                                 tabel_type=tabel_type,
-                                                                 model_type=model_type,
-                                                                 anonymize_fields=anonymize_fields,
-                                                                 sampling_or_not=sampling_or_not,
-                                                                 )
-            self.assertEqual(status.code, 0)
-            self.assertEqual(status.msg, '模型训练成功，并成功保存！')
-            print("synthetic_data:\n", synthetic_data)
-            print("privacy_score:\n", privacy_score)
+        # 测试TVAE模型，仅训练，不生成仿真数据
+        real_data_file_path = "tests/data/adult.csv"
+        model_save_path = "tests/models/tvae.pkl"
+        tabel_type = "tabular"
+        model_type = "TVAE"
+        anonymize_fields = "{'native-country':'country'}"
+        sampling_or_not = False
+        # sample_num_rows = 100
+        status, synthetic_data, privacy_score = send_request(real_data_file_path=real_data_file_path,
+                                                             model_save_path=model_save_path,
+                                                             tabel_type=tabel_type,
+                                                             model_type=model_type,
+                                                             anonymize_fields=anonymize_fields,
+                                                             sampling_or_not=sampling_or_not,
+                                                             )
+        self.assertEqual(status.code, 0)
+        self.assertEqual(status.msg, '模型训练成功，并成功保存！（该任务类型是仅训练模型，不生成仿真数据样本，因此隐私性得分为1）')
+        print("synthetic_data:\n", synthetic_data)
+        print("privacy_score:\n", privacy_score)
 
     def test_train_ctgan_success(self):
         # 测试CTGAN模型，训练完成后生成仿真数据
@@ -341,6 +346,7 @@ class TestSyntheticDataServiceTrainingSuccess(unittest.TestCase):
         self.assertEqual(status.msg, '生成仿真数据成功！')
         print("synthetic_data:\n", synthetic_data)
         print("privacy_score:\n", privacy_score)
+
 
 if __name__ == '__main__':
     unittest.main()

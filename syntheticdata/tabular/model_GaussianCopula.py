@@ -12,7 +12,6 @@ from syntheticdata.metadata import Table
 from syntheticdata.tabular.base import BaseTabularModel, NonParametricError
 from syntheticdata.tabular.utils import flatten_dict, unflatten_dict
 
-
 LOGGER = logging.getLogger('SyntheticData')
 
 
@@ -172,7 +171,7 @@ class GaussianCopula(BaseTabularModel):
                  anonymize_fields=None, primary_key=None, constraints=None, table_metadata=None,
                  field_distributions=None, default_distribution=None,
                  categorical_transformer=None, rounding='auto', min_value='auto',
-                 max_value='auto', verbose=False,epochs=None):
+                 max_value='auto', verbose=False, epochs=None):
 
         if isinstance(table_metadata, dict):
             table_metadata = Table.from_dict(table_metadata)
@@ -197,7 +196,7 @@ class GaussianCopula(BaseTabularModel):
             for field, distribution in (field_distributions or {}).items()
         }
         self._default_distribution = (
-            self._validate_distribution(default_distribution) or self._DEFAULT_DISTRIBUTION
+                self._validate_distribution(default_distribution) or self._DEFAULT_DISTRIBUTION
         )
 
         self._categorical_transformer = categorical_transformer or self._DEFAULT_TRANSFORMER

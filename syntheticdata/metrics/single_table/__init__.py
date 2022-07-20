@@ -4,7 +4,6 @@ from syntheticdata.metrics.single_table import (
     base, privacy)
 from syntheticdata.metrics.single_table.base import SingleTableMetric
 
-
 from syntheticdata.metrics.single_table.privacy.base import CategoricalPrivacyMetric, NumericalPrivacyMetric
 from syntheticdata.metrics.single_table.privacy.cap import (
     CategoricalCAP, CategoricalGeneralizedCAP, CategoricalZeroCAP)

@@ -4,7 +4,7 @@
 import pandas as pd
 
 from syntheticdata.metrics import (
-    demos, goal,  single_table,)
+    demos, goal, single_table, )
 from syntheticdata.metrics.demos import load_demo
 
 __all__ = [
